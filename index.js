@@ -20,5 +20,12 @@ function increasePercent() {
         setTimeout(increasePercent, delay);
     }
 }
-
 increasePercent();
+
+
+// Задаем высоту body равной window.innerHeight
+document.body.style.height = window.innerHeight + 'px';
+
+window.addEventListener('resize', function() {
+  document.body.style.height = window.innerHeight + 'px';
+});
