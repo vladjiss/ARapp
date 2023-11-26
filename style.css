@@ -8,9 +8,6 @@
 
         url('fonts/YandexSansDisplay-Regular.woff2') format('woff2');
 
-    font-weight: normal;
-
-    font-style: normal;
 }
 
 @font-face {
@@ -23,20 +20,8 @@
 
         url('fonts/YandexSansText-Regular.woff2') format('woff2');
 
-    font-weight: normal;
 }
-@font-face {
-    font-family: "YS Text Bold";
-    src: url('fonts/YandexSansText-Bold.eot') format('eot'),
 
-        url('fonts/YandexSansText-Bold.woff') format('woff'),
-
-        url('fonts/YandexSansText-Bold.ttf') format('truetype'),
-
-        url('fonts/YandexSansText-Bold.woff2') format('woff2');
-
-    font-weight: bold;
-}
 
 .hidden {
     display: none;
@@ -79,7 +64,8 @@ body {
 
 .loadPage h1 {
     font-size: 30px;
-    font-family: 'YS Text Bold';
+    
+    font-weight: 800;
     
 }
 
@@ -90,7 +76,7 @@ body {
 
 .loadPage .load {
     width: 100%;
-    height: 29%;
+    height: 32%;
     background-color: #ffffff;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
@@ -102,7 +88,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 10%;
+    padding-bottom: 15%;
     align-items: center;
 
 }
@@ -133,7 +119,7 @@ body {
 
 #percent {
     font-size: 16px;
-    font-family: "YS Text Bold";
+    font-weight: 800;
 }
 
 
