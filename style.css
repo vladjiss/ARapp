@@ -88,6 +88,7 @@ body {
 }
 
 .loadPage .load {
+    min-height: 250px;
     width: 100%;
     background-color: #ffffff;
     border-top-right-radius: 30px;
