@@ -56,7 +56,7 @@ body {
     width: 100vw;
     overflow: hidden;
     touch-action: none;
-    background: #80808077;
+    background: #80808000;
     /* для проверки */
 
 }
@@ -77,14 +77,14 @@ body {
 }
 
 .loadPage h1 {
-    font-size: 30px;
+    font-size: 32px;
     
-    font-weight: 800;
+
 }
 
 .loadPage p {
     font-size: 16px;
-    font-weight: 400;
+    margin: 12px;
 }
 
 .loadPage .load {
@@ -98,11 +98,6 @@ body {
     position: fixed;
     bottom: 0;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 15%;
-    align-items: center;
 
 }
 
@@ -111,12 +106,14 @@ body {
     height: 5px;
     border-radius: 30px;
     background: #F4F4F4;
-    margin: 15px auto;
+    margin: 15px auto 27px;
 }
 
 .progressbar {
-    width: 80%;
+    margin: 0 auto;
+    width: 75%;
     height: 8px;
+    
     border-radius: 20px;
     background: #ececec;
 
@@ -131,8 +128,9 @@ body {
 }
 
 #percent {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 800;
+    margin: 26px auto 14px;
 }
 
 

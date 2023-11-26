@@ -1,3 +1,18 @@
+function toggleHidden(element) {
+    var nextElement = element.nextElementSibling;
+  
+    if (nextElement) {
+      nextElement.classList.remove('hidden');
+    }
+    
+    element.classList.add('hidden');
+  }
+
+
+
+
+
+
 const progressLineElement = document.getElementById("progressLine");
 const percentElement = document.getElementById("percent");
 
