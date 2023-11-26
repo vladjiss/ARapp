@@ -8,21 +8,413 @@
     <title>ARapp</title>
 </head>
 
-<body style="background-color: #ffffff;">
-
-    <div class="screen loadPage">
+<body>
+    <div class="screen loadPage"> <!--loading page --> 
         <div class="load">
             <div class="load_head"></div>
             <h1>Loading</h1>
             <p>Enjoy special AR game created by <br> Yandex Ads</p>
-            <p id="percent">0%</p>
+            <h2 id="percent">0%</h2>
             <div class="progressbar">
                 <div id="progressLine"></div>
             </div>
         </div>
     </div>
+    <div class="screen teamSelect choise hidden"><!--quantity of teams --> 
+        <div class="nav">
+            <div class="btn-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M17.0013 9.3333C17.1846 9.3333 17.3333 9.47597 17.3333 9.66997V10.33C17.3337 10.3739 17.3255 10.4175 17.309 10.4582C17.2926 10.499 17.2682 10.5361 17.2373 10.5673C17.2065 10.5986 17.1697 10.6235 17.1292 10.6405C17.0887 10.6576 17.0453 10.6665 17.0013 10.6666H5.07931L8.41531 14.0026C8.55065 14.138 8.54864 14.3493 8.41731 14.4806L7.95064 14.9473C7.91996 14.9791 7.88322 15.0044 7.84259 15.0218C7.80195 15.0392 7.75825 15.0482 7.71407 15.0484C7.66988 15.0486 7.6261 15.0399 7.58533 15.0229C7.54455 15.0059 7.50759 14.9808 7.47664 14.9493L2.76331 10.236C2.70143 10.173 2.66675 10.0882 2.66675 9.99996C2.66675 9.91168 2.70143 9.82692 2.76331 9.76396L7.47664 5.05062C7.54004 4.98856 7.62534 4.95397 7.71406 4.95435C7.80278 4.95472 7.88777 4.99004 7.95064 5.05264L8.41731 5.51929C8.44913 5.55049 8.47438 5.58777 8.49155 5.62889C8.50872 5.67001 8.51748 5.71415 8.51729 5.75871C8.5171 5.80328 8.50798 5.84735 8.49046 5.88833C8.47295 5.92931 8.44739 5.96637 8.41531 5.9973L5.07931 9.3333H17.0013Z"
+                        fill="black" />
+                </svg>
+            </div>
+            <h2>ImginatiON</h2>
+        </div>
+        <div class="main_game">
+            <h1>Quantity of teams</h1>
+            <div class="players_choise">
+                <div class="player wolf"></div>
+                <div class="player bear play_select"></div>
+                <div class="player penguin"></div>
+                <div class="player duck play_select"></div>
+                <div class="player frog"></div>
+                <div class="player mouse play_select"></div>
+            </div>
+        </div>
+        <div class="footer_button">next</div>
+    </div>
+    <div class="screen teamSelect names hidden"><!--lets name the team --> 
+        <div class="nav">
+            <div class="btn-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M17.0013 9.3333C17.1846 9.3333 17.3333 9.47597 17.3333 9.66997V10.33C17.3337 10.3739 17.3255 10.4175 17.309 10.4582C17.2926 10.499 17.2682 10.5361 17.2373 10.5673C17.2065 10.5986 17.1697 10.6235 17.1292 10.6405C17.0887 10.6576 17.0453 10.6665 17.0013 10.6666H5.07931L8.41531 14.0026C8.55065 14.138 8.54864 14.3493 8.41731 14.4806L7.95064 14.9473C7.91996 14.9791 7.88322 15.0044 7.84259 15.0218C7.80195 15.0392 7.75825 15.0482 7.71407 15.0484C7.66988 15.0486 7.6261 15.0399 7.58533 15.0229C7.54455 15.0059 7.50759 14.9808 7.47664 14.9493L2.76331 10.236C2.70143 10.173 2.66675 10.0882 2.66675 9.99996C2.66675 9.91168 2.70143 9.82692 2.76331 9.76396L7.47664 5.05062C7.54004 4.98856 7.62534 4.95397 7.71406 4.95435C7.80278 4.95472 7.88777 4.99004 7.95064 5.05264L8.41731 5.51929C8.44913 5.55049 8.47438 5.58777 8.49155 5.62889C8.50872 5.67001 8.51748 5.71415 8.51729 5.75871C8.5171 5.80328 8.50798 5.84735 8.49046 5.88833C8.47295 5.92931 8.44739 5.96637 8.41531 5.9973L5.07931 9.3333H17.0013Z"
+                        fill="black" />
+                </svg>
+            </div>
+            <h2>ImginatiON</h2>
+        </div>
+        <div class="main_game">
+            <h1>let's name the team</h1>
+            <div class="players_get_names">
+                <div class="player_name bear"><input placeholder="Team 1" type="text"></div>
+                <div class="player_name duck"><input placeholder="Team 2" type="text"></div>
+                <div class="player_name mouse"><input placeholder="Team 3" type="text"></div>
+            </div>
+        </div>
+        <div class="footer_button">next</div>
 
-    <div class="screen">
+    </div>
+    <div class="screen teamSelect first_play hidden"> <!--who first --> 
+        <div class="nav">
+            <div class="btn-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M17.0013 9.3333C17.1846 9.3333 17.3333 9.47597 17.3333 9.66997V10.33C17.3337 10.3739 17.3255 10.4175 17.309 10.4582C17.2926 10.499 17.2682 10.5361 17.2373 10.5673C17.2065 10.5986 17.1697 10.6235 17.1292 10.6405C17.0887 10.6576 17.0453 10.6665 17.0013 10.6666H5.07931L8.41531 14.0026C8.55065 14.138 8.54864 14.3493 8.41731 14.4806L7.95064 14.9473C7.91996 14.9791 7.88322 15.0044 7.84259 15.0218C7.80195 15.0392 7.75825 15.0482 7.71407 15.0484C7.66988 15.0486 7.6261 15.0399 7.58533 15.0229C7.54455 15.0059 7.50759 14.9808 7.47664 14.9493L2.76331 10.236C2.70143 10.173 2.66675 10.0882 2.66675 9.99996C2.66675 9.91168 2.70143 9.82692 2.76331 9.76396L7.47664 5.05062C7.54004 4.98856 7.62534 4.95397 7.71406 4.95435C7.80278 4.95472 7.88777 4.99004 7.95064 5.05264L8.41731 5.51929C8.44913 5.55049 8.47438 5.58777 8.49155 5.62889C8.50872 5.67001 8.51748 5.71415 8.51729 5.75871C8.5171 5.80328 8.50798 5.84735 8.49046 5.88833C8.47295 5.92931 8.44739 5.96637 8.41531 5.9973L5.07931 9.3333H17.0013Z"
+                        fill="black" />
+                </svg>
+            </div>
+            <h2>ImginatiON</h2>
+        </div>
+        <div class="main_game">
+            <h1>Who first</h1>
+            <div class="players_game">
+                <div class="player_game bear"></div>
+                <div class="player_game duck"></div>
+                <div class="player_game mouse"></div>
+            </div>
+        </div>
+        <div class="footer_button">start</div>
+
+    </div>
+    <div class="screen game_go hidden"> <!--Start game with cards --> 
+        <div class="nav" style="height: 5%;">
+            <div class="btn-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                        d="M16.7083 9.16663H3.29167C2.85444 9.16663 2.5 9.52107 2.5 9.95829V10.0416C2.5 10.4789 2.85444 10.8333 3.29167 10.8333H16.7083C17.1456 10.8333 17.5 10.4789 17.5 10.0416V9.95829C17.5 9.52107 17.1456 9.16663 16.7083 9.16663Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 13.3334H3.29167C2.85444 13.3334 2.5 13.6878 2.5 14.125V14.2084C2.5 14.6456 2.85444 15 3.29167 15H16.7083C17.1456 15 17.5 14.6456 17.5 14.2084V14.125C17.5 13.6878 17.1456 13.3334 16.7083 13.3334Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 5H3.29167C2.85444 5 2.5 5.35444 2.5 5.79167V5.875C2.5 6.31223 2.85444 6.66667 3.29167 6.66667H16.7083C17.1456 6.66667 17.5 6.31223 17.5 5.875V5.79167C17.5 5.35444 17.1456 5 16.7083 5Z"
+                        fill="black" />
+                </svg>
+            </div>
+
+        </div>
+
+        <div class="footer_player ">
+            <div class="player-info">
+                <div class="bear"></div>
+                <div>
+                    <h3>Bears</h3>
+                    <p>Point the camera at the game card</p>
+                </div>
+                <div class="game_score">0</div>
+            </div>
+            <div class="footer_button">Play</div>
+        </div>
+
+
+    </div>
+    <div class="screen game_go playing hidden"><!--card with DinoRex and timer  --> 
+        <div class="nav game_nav"
+            style="height: 5%; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+            <div class="btn-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                        d="M16.7083 9.16663H3.29167C2.85444 9.16663 2.5 9.52107 2.5 9.95829V10.0416C2.5 10.4789 2.85444 10.8333 3.29167 10.8333H16.7083C17.1456 10.8333 17.5 10.4789 17.5 10.0416V9.95829C17.5 9.52107 17.1456 9.16663 16.7083 9.16663Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 13.3334H3.29167C2.85444 13.3334 2.5 13.6878 2.5 14.125V14.2084C2.5 14.6456 2.85444 15 3.29167 15H16.7083C17.1456 15 17.5 14.6456 17.5 14.2084V14.125C17.5 13.6878 17.1456 13.3334 16.7083 13.3334Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 5H3.29167C2.85444 5 2.5 5.35444 2.5 5.79167V5.875C2.5 6.31223 2.85444 6.66667 3.29167 6.66667H16.7083C17.1456 6.66667 17.5 6.31223 17.5 5.875V5.79167C17.5 5.35444 17.1456 5 16.7083 5Z"
+                        fill="black" />
+                </svg>
+            </div>
+            <div class="player_id">
+                <div style="display: flex; align-items: center;">
+                    <div class="bear"></div>
+                    <h3>Bears</h3>
+                </div>
+
+            </div>
+            <div class="game_score">0</div>
+        </div>
+
+        <div class="card">
+
+            <div class="display dino_rex" style="text-align: center;">
+                <div style="width: 90%; margin: 0 auto;">
+                    <div class="timer">00:<span id="timer">30</span></div>
+                    <p>Explain the word in the picture without words</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container_btns">
+            <div class="btn_no"></div>
+            <div class="btn_yes"></div>
+        </div>
+    </div>
+    <div class="screen game_go playing hidden"><!--Dino image --> 
+        <div class="nav game_nav"
+            style="height: 5%; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+            <div class="btn-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                        d="M16.7083 9.16663H3.29167C2.85444 9.16663 2.5 9.52107 2.5 9.95829V10.0416C2.5 10.4789 2.85444 10.8333 3.29167 10.8333H16.7083C17.1456 10.8333 17.5 10.4789 17.5 10.0416V9.95829C17.5 9.52107 17.1456 9.16663 16.7083 9.16663Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 13.3334H3.29167C2.85444 13.3334 2.5 13.6878 2.5 14.125V14.2084C2.5 14.6456 2.85444 15 3.29167 15H16.7083C17.1456 15 17.5 14.6456 17.5 14.2084V14.125C17.5 13.6878 17.1456 13.3334 16.7083 13.3334Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 5H3.29167C2.85444 5 2.5 5.35444 2.5 5.79167V5.875C2.5 6.31223 2.85444 6.66667 3.29167 6.66667H16.7083C17.1456 6.66667 17.5 6.31223 17.5 5.875V5.79167C17.5 5.35444 17.1456 5 16.7083 5Z"
+                        fill="black" />
+                </svg>
+            </div>
+            <div class="player_id">
+                <div style="display: flex; align-items: center;">
+                    <div class="bear"></div>
+                    <h3>Bears</h3>
+                </div>
+
+            </div>
+            <div class="game_score">8</div>
+        </div>
+
+        <div class="animal_image dino_rex_img">
+
+        </div>
+        <div class="footer_game">
+            <p>Next</p>
+
+        </div>
+
+
+    </div>
+    <div class="screen game_go playing hidden"><!--Dino share --> 
+        <div class="nav game_nav"
+            style="height: 5%; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+            <div class="btn-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                        d="M16.7083 9.16663H3.29167C2.85444 9.16663 2.5 9.52107 2.5 9.95829V10.0416C2.5 10.4789 2.85444 10.8333 3.29167 10.8333H16.7083C17.1456 10.8333 17.5 10.4789 17.5 10.0416V9.95829C17.5 9.52107 17.1456 9.16663 16.7083 9.16663Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 13.3334H3.29167C2.85444 13.3334 2.5 13.6878 2.5 14.125V14.2084C2.5 14.6456 2.85444 15 3.29167 15H16.7083C17.1456 15 17.5 14.6456 17.5 14.2084V14.125C17.5 13.6878 17.1456 13.3334 16.7083 13.3334Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 5H3.29167C2.85444 5 2.5 5.35444 2.5 5.79167V5.875C2.5 6.31223 2.85444 6.66667 3.29167 6.66667H16.7083C17.1456 6.66667 17.5 6.31223 17.5 5.875V5.79167C17.5 5.35444 17.1456 5 16.7083 5Z"
+                        fill="black" />
+                </svg>
+            </div>
+            <div class="player_id">
+                <div style="display: flex; align-items: center;">
+                    <div class="bear"></div>
+                    <h3>Bears</h3>
+                </div>
+
+            </div>
+            <div class="game_score">8</div>
+        </div>
+        <div class="share_container">
+            <div class="animal_image dino_rex_img">
+                <div class="close"></div>
+            </div>
+            <h2>SHARE</h2>
+        </div>
+        
+        <div class="footer_game">
+            <p>Done</p>
+
+        </div>
+
+        
+    </div>
+    <div class="screen game_go playing hidden"><!--card with KingKong and timer  -->
+        <div class="nav game_nav"
+            style="height: 5%; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+            <div class="btn-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                        d="M16.7083 9.16663H3.29167C2.85444 9.16663 2.5 9.52107 2.5 9.95829V10.0416C2.5 10.4789 2.85444 10.8333 3.29167 10.8333H16.7083C17.1456 10.8333 17.5 10.4789 17.5 10.0416V9.95829C17.5 9.52107 17.1456 9.16663 16.7083 9.16663Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 13.3334H3.29167C2.85444 13.3334 2.5 13.6878 2.5 14.125V14.2084C2.5 14.6456 2.85444 15 3.29167 15H16.7083C17.1456 15 17.5 14.6456 17.5 14.2084V14.125C17.5 13.6878 17.1456 13.3334 16.7083 13.3334Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 5H3.29167C2.85444 5 2.5 5.35444 2.5 5.79167V5.875C2.5 6.31223 2.85444 6.66667 3.29167 6.66667H16.7083C17.1456 6.66667 17.5 6.31223 17.5 5.875V5.79167C17.5 5.35444 17.1456 5 16.7083 5Z"
+                        fill="black" />
+                </svg>
+            </div>
+            <div class="player_id">
+                <div style="display: flex; align-items: center;">
+                    <div class="bear"></div>
+                    <h3>Bears</h3>
+                </div>
+
+            </div>
+            <div class="game_score">0</div>
+        </div>
+
+        <div class="card">
+
+            <div class="display king_kong" style="text-align: center;">
+                <div style="width: 90%; margin: 0 auto;">
+                    <div class="timer">00:<span id="timer">30</span></div>
+                    <p>Explain the word in the picture without words</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container_btns">
+            <div class="btn_no"></div>
+            <div class="btn_yes"></div>
+        </div>
+    </div>
+    <div class="screen game_go playing hidden"><!--KingKong image --> 
+        <div class="nav game_nav"
+            style="height: 5%; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+            <div class="btn-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                        d="M16.7083 9.16663H3.29167C2.85444 9.16663 2.5 9.52107 2.5 9.95829V10.0416C2.5 10.4789 2.85444 10.8333 3.29167 10.8333H16.7083C17.1456 10.8333 17.5 10.4789 17.5 10.0416V9.95829C17.5 9.52107 17.1456 9.16663 16.7083 9.16663Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 13.3334H3.29167C2.85444 13.3334 2.5 13.6878 2.5 14.125V14.2084C2.5 14.6456 2.85444 15 3.29167 15H16.7083C17.1456 15 17.5 14.6456 17.5 14.2084V14.125C17.5 13.6878 17.1456 13.3334 16.7083 13.3334Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 5H3.29167C2.85444 5 2.5 5.35444 2.5 5.79167V5.875C2.5 6.31223 2.85444 6.66667 3.29167 6.66667H16.7083C17.1456 6.66667 17.5 6.31223 17.5 5.875V5.79167C17.5 5.35444 17.1456 5 16.7083 5Z"
+                        fill="black" />
+                </svg>
+            </div>
+            <div class="player_id">
+                <div style="display: flex; align-items: center;">
+                    <div class="bear"></div>
+                    <h3>Bears</h3>
+                </div>
+
+            </div>
+            <div class="game_score">8</div>
+        </div>
+
+        <div class="animal_image king_kong_img">
+
+        </div>
+        <div class="footer_game">
+            <p>Next</p>
+
+        </div>
+
+
+    </div>
+    <div class="screen game_go playing hidden"> <!--KongKong Share --> 
+        <div class="nav game_nav"
+            style="height: 5%; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+            <div class="btn-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                        d="M16.7083 9.16663H3.29167C2.85444 9.16663 2.5 9.52107 2.5 9.95829V10.0416C2.5 10.4789 2.85444 10.8333 3.29167 10.8333H16.7083C17.1456 10.8333 17.5 10.4789 17.5 10.0416V9.95829C17.5 9.52107 17.1456 9.16663 16.7083 9.16663Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 13.3334H3.29167C2.85444 13.3334 2.5 13.6878 2.5 14.125V14.2084C2.5 14.6456 2.85444 15 3.29167 15H16.7083C17.1456 15 17.5 14.6456 17.5 14.2084V14.125C17.5 13.6878 17.1456 13.3334 16.7083 13.3334Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 5H3.29167C2.85444 5 2.5 5.35444 2.5 5.79167V5.875C2.5 6.31223 2.85444 6.66667 3.29167 6.66667H16.7083C17.1456 6.66667 17.5 6.31223 17.5 5.875V5.79167C17.5 5.35444 17.1456 5 16.7083 5Z"
+                        fill="black" />
+                </svg>
+            </div>
+            <div class="player_id">
+                <div style="display: flex; align-items: center;">
+                    <div class="bear"></div>
+                    <h3>Bears</h3>
+                </div>
+
+            </div>
+            <div class="game_score">8</div>
+        </div>
+        <div class="share_container">
+            <div class="animal_image king_kong_img">
+                <div class="close"></div>
+            </div>
+            <h2>SHARE</h2>
+        </div>
+        
+        <div class="footer_game">
+            <p>Done</p>
+
+        </div>
+
+        
+    </div>
+    <div class="screen game_go playing end_game_cards hidden"><!--when end cards game --> 
+        <div class="nav game_nav"
+            style="height: 5%; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+            <div class="btn-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                        d="M16.7083 9.16663H3.29167C2.85444 9.16663 2.5 9.52107 2.5 9.95829V10.0416C2.5 10.4789 2.85444 10.8333 3.29167 10.8333H16.7083C17.1456 10.8333 17.5 10.4789 17.5 10.0416V9.95829C17.5 9.52107 17.1456 9.16663 16.7083 9.16663Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 13.3334H3.29167C2.85444 13.3334 2.5 13.6878 2.5 14.125V14.2084C2.5 14.6456 2.85444 15 3.29167 15H16.7083C17.1456 15 17.5 14.6456 17.5 14.2084V14.125C17.5 13.6878 17.1456 13.3334 16.7083 13.3334Z"
+                        fill="black" />
+                    <path
+                        d="M16.7083 5H3.29167C2.85444 5 2.5 5.35444 2.5 5.79167V5.875C2.5 6.31223 2.85444 6.66667 3.29167 6.66667H16.7083C17.1456 6.66667 17.5 6.31223 17.5 5.875V5.79167C17.5 5.35444 17.1456 5 16.7083 5Z"
+                        fill="black" />
+                </svg>
+            </div>
+            <div class="player_id">
+                <div style="display: flex; align-items: center;">
+                    <div class="bear"></div>
+                    <h3>Bears</h3>
+                </div>
+
+            </div>
+            <div class="game_score">12</div>
+        </div>
+
+        <div class="animal_image">
+            <div class="end_game_img dino_rex_img"></div>
+            <div class="end_game_img king_kong_img"></div>
+            <div class="end_game_img tree_img"></div>
+            <div class="end_game_img dwarf_img"></div>
+            <div class="end_game_img dragon_img"></div>
+        </div>
+        <div class="footer_game">
+            <p>Done</p>
+
+        </div>
+
+
+    </div>
+    <div class="screen teamSelect next_game hidden"> <!--who next --> 
+        <div class="nav">
+            <div class="btn-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M17.0013 9.3333C17.1846 9.3333 17.3333 9.47597 17.3333 9.66997V10.33C17.3337 10.3739 17.3255 10.4175 17.309 10.4582C17.2926 10.499 17.2682 10.5361 17.2373 10.5673C17.2065 10.5986 17.1697 10.6235 17.1292 10.6405C17.0887 10.6576 17.0453 10.6665 17.0013 10.6666H5.07931L8.41531 14.0026C8.55065 14.138 8.54864 14.3493 8.41731 14.4806L7.95064 14.9473C7.91996 14.9791 7.88322 15.0044 7.84259 15.0218C7.80195 15.0392 7.75825 15.0482 7.71407 15.0484C7.66988 15.0486 7.6261 15.0399 7.58533 15.0229C7.54455 15.0059 7.50759 14.9808 7.47664 14.9493L2.76331 10.236C2.70143 10.173 2.66675 10.0882 2.66675 9.99996C2.66675 9.91168 2.70143 9.82692 2.76331 9.76396L7.47664 5.05062C7.54004 4.98856 7.62534 4.95397 7.71406 4.95435C7.80278 4.95472 7.88777 4.99004 7.95064 5.05264L8.41731 5.51929C8.44913 5.55049 8.47438 5.58777 8.49155 5.62889C8.50872 5.67001 8.51748 5.71415 8.51729 5.75871C8.5171 5.80328 8.50798 5.84735 8.49046 5.88833C8.47295 5.92931 8.44739 5.96637 8.41531 5.9973L5.07931 9.3333H17.0013Z"
+                        fill="black" />
+                </svg>
+            </div>
+            <h2>ImginatiON</h2>
+        </div>
+        <div class="main_game">
+            <h1>Who’s Next
+            </h1>
+            <div class="players_game">
+                <div class="player_game score bear"> <span>12</span></div>
+                <div class="player_game duck"></div>
+                <div class="player_game mouse"></div>
+            </div>
+        </div>
+        <div class="footer_button">finish</div>
 
     </div>
 

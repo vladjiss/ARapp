@@ -24,22 +24,41 @@
         url('fonts/YandexSansText-Regular.woff2') format('woff2');
 
     font-weight: normal;
+}
+@font-face {
+    font-family: "YS Text Bold";
+    src: url('fonts/YandexSansText-Bold.eot') format('eot'),
 
-    font-style: normal;
+        url('fonts/YandexSansText-Bold.woff') format('woff'),
+
+        url('fonts/YandexSansText-Bold.ttf') format('truetype'),
+
+        url('fonts/YandexSansText-Bold.woff2') format('woff2');
+
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 html {
     overflow: hidden;
+
 }
 
 body {
     width: 100vw;
     overflow: hidden;
     touch-action: none;
+    background: #80808077;
+    /* для проверки */
 
 }
 
@@ -47,19 +66,21 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+    font-family: 'YA Text', Arial, sans-serif;
 }
 
 .loadPage {
     background: url("img/bg.png") no-repeat;
     background-size: cover;
     background-position: 25%;
-    font-family: 'YA Text', Arial, sans-serif;
+
     color: #1A54A0;
 }
 
 .loadPage h1 {
     font-size: 30px;
-    font-weight: 800;
+    font-family: 'YS Text Bold';
+    
 }
 
 .loadPage p {
@@ -69,12 +90,12 @@ body {
 
 .loadPage .load {
     width: 100%;
-    height: 32%;
+    height: 29%;
     background-color: #ffffff;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
     box-shadow: 0px 0px 64px 0px rgba(0, 0, 0, 0.55);
-    
+
     position: fixed;
     bottom: 0;
     text-align: center;
@@ -111,5 +132,553 @@ body {
 }
 
 #percent {
+    font-size: 16px;
+    font-family: "YS Text Bold";
+}
+
+
+.nav {
+    position: relative;
+    text-align: center;
+    margin: 5% 0;
+
+}
+
+.nav h2 {
+    font-size: 22px;
     font-weight: 800;
+
+}
+
+.btn-back {
+    position: absolute;
+    border-radius: 10px;
+    background: #F8F8F8;
+    width: 40px;
+    height: 40px;
+    top: calc(50% - 20px);
+
+    left: 0;
+    padding: 10px;
+}
+
+.teamSelect {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.teamSelect h1 {
+    height: 10%;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main_game {
+    height: 80%;
+}
+
+.footer_button {
+    width: 100%;
+    height: 62px;
+    border-radius: 16px;
+    background-color: #1F69CA;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    padding: 20px 100px;
+
+    color: #FFF;
+
+    text-align: center;
+    font-family: YS Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+
+    background-image: url("img/Union.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.players_choise {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 90%;
+}
+
+.players_choise .player {
+    width: 49%;
+    height: 29%;
+    max-width: 165.796px;
+    max-height: 165.796px;
+    border-radius: 33.83px;
+    background-color: #F8F8F8;
+}
+
+.player.play_select {
+    background-color: #FFEED4;
+}
+
+.players_get_names input {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #EDE6E6;
+
+    background: #FFF;
+    float: right;
+    margin-right: 5%;
+
+    color: #000;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 17px 21px;
+}
+
+.teamSelect.names .players_get_names .player_name {
+    width: 100%;
+    min-height: 110px;
+    background-position: 0 0;
+    border-radius: 22.445px;
+    background-color: #F8F8F8;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+
+.players_game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+}
+
+.player_game {
+    min-width: 110px;
+    min-height: 110px;
+    border-radius: 20%;
+    background-color: #F8F8F8;
+}
+
+.screen.game_go {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer_player {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.60);
+    padding: 5%;
+    border-radius: 30px;
+    color: #FFF;
+
+}
+
+.footer_player .bear {
+    width: 78px;
+    height: 76px;
+    background-image: url("img/animals/bear 1.png");
+
+}
+
+.footer_player h3 {
+    margin: 1em 0 0.5em;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    /* 88.889% */
+}
+
+.footer_player p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    /* 133.333% */
+}
+
+.player-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.game_score {
+    background: #FFEACB;
+    color: #FF825A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+
+}
+
+.footer_player .game_score {
+    width: 39px;
+    height: 26px;
+
+}
+
+.game_go.playing .game_score {
+
+    width: 40px;
+    height: 40px;
+}
+
+.game_go.playing .btn-back {
+    position: static;
+}
+
+.game_go.playing .game_nav .bear {
+    width: 35px;
+    height: 34px;
+    margin-right: 5px;
+}
+
+.game_go.playing .game_nav {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    /* 88.889% */
+}
+
+.card {
+
+    background: url("img/bg.png") no-repeat;
+    background-size: cover;
+    width: 90%;
+    margin: 0 auto;
+    transform: rotate(-1deg);
+    box-shadow: 0px 0px 16px 0px rgba(17, 67, 132, 0.60);
+    border-radius: 40px;
+    height: 60%;
+    position: relative;
+    top: 5%;
+}
+
+.display {
+    padding-top: 15%;
+    top: 12px;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    background: #ffffff;
+
+    border-radius: 28px;
+
+    position: absolute;
+}
+
+.card .timer {
+    color: #263238;
+
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.card p {
+    color: #263238;
+    margin-top: 5%;
+
+
+
+    font-size: 16px;
+
+    font-weight: 500;
+    line-height: 16px;
+}
+
+
+
+.container_btns {
+    display: flex;
+    justify-content: space-between;
+    width: 84%;
+    height: 8%;
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+    right: 8%;
+}
+
+.btn_no {
+    border-radius: 10px;
+    background-color: #FFEACB;
+    width: 48%;
+    background-image: url('img/cancel.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn_yes {
+    border-radius: 10px;
+    background-color: #1A54A0;
+    width: 48%;
+    background-image: url('img/done.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+.footer_game {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 10%;
+    margin: 0 auto;
+    background-image: url("img/shot.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #FFF;
+    font-family: "YS Text";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 16px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.share_container {
+    position: relative;
+    width: 80%;
+    top: calc(40% - (65% / 2));
+    left: calc(50% - (80% / 2));
+    padding-top: 1%;
+    height: 60%;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.60);
+
+}
+
+.animal_image {
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 80%;
+    background-position: center;
+}
+
+.share_container .animal_image {
+    position: relative;
+    height: 89%;
+    width: 98%;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-color: #D9D9D9;
+
+}
+
+.share_container .animal_image .close {
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    background-image: url("img/cancel(x).png");
+    width: 24px;
+    height: 24px;
+
+}
+
+.share_container h2 {
+    color: #FFF;
+    font-family: "YS Text";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.animal_image .end_game_img {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.next_game .footer_button {
+    background: #FFEACB;
+    color: #FF825A;
+}
+
+.player_game.score {
+    background-color: #FFEED4;
+    position: relative;
+}
+
+.player_game.score span {
+    padding: 0.6em;
+    position: absolute;
+    right: -0.6em;
+    top: -0.6em;
+    background-image: url("img/score_player.svg");
+    background-size: contain;
+
+    color: #FFF;
+
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    /* 100% */
+}
+
+
+/* player icons*/
+.wolf {
+    background-image: url("img/animals/wolf.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bear {
+    background-image: url("img/animals/bear.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.penguin {
+    background-image: url("img/animals/penguin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.duck {
+    background-image: url("img/animals/duck.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.frog {
+    background-image: url("img/animals/frog.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mouse {
+    background-image: url("img/animals/mouse.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* cards */
+.dino_rex {
+    background-image: url("img/animals/dino_rex.png");
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    background-size: 70%;
+
+}
+
+.king_kong {
+    background-image: url("img/animals/king_kong.png");
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    background-size: 70%;
+
+}
+
+/* animals */
+
+
+.dino_rex_img {
+    background-image: url("img/animals/dinoRexReal.png");
+}
+
+.king_kong_img {
+    background-image: url("img/animals/king_kong_real.png");
+}
+
+.tree_img {
+    background-image: url("img/animals/tree.png");
+}
+
+.dwarf_img {
+    background-image: url("img/animals/dwarf.png");
+}
+
+.dragon_img {
+    background-image: url("img/animals/dragon.png");
+}
+
+
+.end_game_img.dino_rex_img {
+    width: 353px;
+    height: 365px;
+    bottom: 20%;
+    right: -40%;
+    transform: scaleX(-1);
+    z-index: 3;
+
+}
+
+.end_game_img.king_kong_img {
+    width: 162px;
+    height: 230px;
+    bottom: 30%;
+    z-index: 2;
+}
+
+.end_game_img.tree_img {
+    width: 538px;
+    height: 538px;
+    left: -25%;
+    bottom: 20%;
+}
+
+.end_game_img.dwarf_img {
+    width: 95px;
+    height: 108px;
+    bottom: 20%;
+    z-index: 3;
+    left: 20%;
+}
+
+.end_game_img.dragon_img {
+    width: 114px;
+    height: 66px;
+    right: 10%;
+    top: 10%;
 }
