@@ -37,7 +37,7 @@
 }
 
 
-.hidden {
+.screen.hidden {
     display: none;
 }
 
@@ -55,7 +55,7 @@ html {
 body {
     width: 100vw;
     overflow: hidden;
-    touch-action: none;
+    /* touch-action: none; */
     background: #80808000;
     /* для проверки */
 
@@ -68,6 +68,10 @@ body {
     font-family: 'YS Text', Arial, sans-serif;
 }
 
+.main_game {
+    max-height: 80%;
+}
+
 .loadPage {
     background: url("img/bg.png") no-repeat;
     background-size: cover;
@@ -78,7 +82,7 @@ body {
 
 .loadPage h1 {
     font-size: 32px;
-    
+
 
 }
 
@@ -113,12 +117,13 @@ body {
     margin: 0 auto 40px;
     width: 75%;
     height: 8px;
-    
+
     border-radius: 20px;
     background: #ececec;
 
 
 }
+
 
 .progressbar #progressLine {
     width: 50%;
@@ -137,7 +142,8 @@ body {
 .nav {
     position: relative;
     text-align: center;
-    margin: 5% 0;
+    margin: 0px 0 2.5vh;
+    padding-top: 64px;
 
 }
 
@@ -147,16 +153,24 @@ body {
 
 }
 
-.btn-back {
+.btn-nav {
     position: absolute;
     border-radius: 10px;
     background: #F8F8F8;
     width: 40px;
     height: 40px;
-    top: calc(50% - 20px);
+    top: 65px;
 
-    left: 0;
+
     padding: 10px;
+}
+
+.btn-nav.btn-back {
+    left: 0;
+}
+
+.btn-nav.btn-menu {
+    right: 0;
 }
 
 .teamSelect {
@@ -165,6 +179,7 @@ body {
 }
 
 .teamSelect h1 {
+    margin-bottom: 7vh;
     height: 10%;
     font-size: 24px;
     font-style: normal;
@@ -174,13 +189,14 @@ body {
     text-align: center;
 }
 
-.main_game {
-    height: 80%;
-}
+
 
 .footer_button {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    height: 62px;
+    height: 59px;
+    margin-bottom: 34px;
     border-radius: 16px;
     background-color: #1F69CA;
     justify-content: center;
@@ -208,18 +224,27 @@ body {
 .players_choise {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 90%;
 }
 
+/* .players_choise .player {
+    width: 165.796px;
+    height: 165.796px;
+    border-radius: 33.83px;
+    background-color: #F8F8F8;
+} */
+
 .players_choise .player {
-    width: 49%;
-    height: 29%;
+    width: 19vh;
+    height: 19vh;
     max-width: 165.796px;
     max-height: 165.796px;
     border-radius: 33.83px;
     background-color: #F8F8F8;
+    margin-bottom: 1vh;
 }
+
 
 .player.play_select {
     background-color: #FFEED4;
@@ -280,14 +305,20 @@ body {
 }
 
 .footer_player {
+    width: 100%;
+    height: 193.401px;
     position: absolute;
-    bottom: 5%;
+    bottom: 34px;
     width: 100%;
     background: rgba(0, 0, 0, 0.60);
     padding: 5%;
     border-radius: 30px;
     color: #FFF;
 
+}
+
+.footer_player .footer_button {
+    width: 90%;
 }
 
 .footer_player .bear {
@@ -346,8 +377,9 @@ body {
     height: 40px;
 }
 
-.game_go.playing .btn-back {
+.game_go .btn-menu {
     position: static;
+    left: 0;
 }
 
 .game_go.playing .game_nav .bear {
@@ -369,14 +401,13 @@ body {
 
     background: url("img/bg.png") no-repeat;
     background-size: cover;
-    width: 90%;
+    width: 38.8vh;
+    height: 66.7vh;
     margin: 0 auto;
     transform: rotate(-1deg);
     box-shadow: 0px 0px 16px 0px rgba(17, 67, 132, 0.60);
     border-radius: 40px;
-    height: 60%;
-    position: relative;
-    top: 5%;
+
 }
 
 .display {
@@ -420,7 +451,7 @@ body {
     width: 84%;
     height: 8%;
     position: absolute;
-    bottom: 10%;
+    bottom: 40px;
     left: 8%;
     right: 8%;
 }
@@ -447,11 +478,11 @@ body {
 
 .footer_game {
     position: absolute;
-    bottom: 5%;
+    bottom: 52px;
     left: 0;
     right: 0;
-    width: 80%;
-    height: 10%;
+    width: 100%;
+height: 60px;
     margin: 0 auto;
     background-image: url("img/shot.svg");
     background-position: center;
@@ -471,14 +502,26 @@ body {
 
 .share_container {
     position: relative;
-    width: 80%;
-    top: calc(40% - (65% / 2));
-    left: calc(50% - (80% / 2));
-    padding-top: 1%;
-    height: 60%;
+    width: 35.3vh;
+    height: 57.3vh;
+    top: calc(35% - (57.3vh / 2));
+    left: calc(50% - (35.3vh / 2));
+    padding-top: 0.6vh;
+    
     border-radius: 30px;
     background: rgba(0, 0, 0, 0.60);
+    z-index: 0;
 
+}
+.share_container::after {
+ content: '';
+ position: absolute;
+ top: -100%;
+ bottom: -100%;
+ right: -100%;
+ left: -100%;
+ background: rgba(0, 0, 0, 0.60);
+ z-index: -1;
 }
 
 .animal_image {
@@ -492,8 +535,8 @@ body {
 
 .share_container .animal_image {
     position: relative;
-    height: 89%;
-    width: 98%;
+    width: 34.1vh;
+    height: 48.6vh;
     margin: 0 auto;
     border-radius: 30px;
     background-color: #D9D9D9;
@@ -518,7 +561,7 @@ body {
     font-weight: 700;
     line-height: 16px;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 24px;
 }
 
 .animal_image .end_game_img {
@@ -548,13 +591,239 @@ body {
 
     color: #FFF;
 
-    font-family: Montserrat;
+    font-family: Montserrat, "Arial";
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 16px;
+}
+
+.game_score_menu .main_game h1 {
+    margin-top: 16.6vh;
+    text-align: left;
+
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 44px;
+    text-transform: uppercase;
+}
+
+.game_score_menu .main_game h1 span {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.game_score_menu .player_score_menu {
+    position: relative;
+    min-height: 110px;
+    border-radius: 22.445px;
+    background-color: #F8F8F8;
+    background-position: left;
+}
+
+.game_score_menu .player_score_menu p {
+    font-family: Montserrat, "Arial";
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: calc(50% - (1em / 2));
+    left: 125px;
+}
+
+.game_score_menu .player_score_menu .score_menu {
+    border-radius: 10px;
+    border: 1px solid #EDE6E6;
+    width: 101px;
+    height: 50px;
+    background: #FFF;
+    color: #000;
+
+    font-family: Montserrat, "Arial";
+    font-size: 16px;
+
+    font-weight: 700;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    right: 39px;
+    top: calc(50% - (50px / 2));
+}
+
+.menu_nav_list {
+    position: absolute;
+    z-index: 2;
+    top: 102px;
+    right: -6%;
+    width: 310px;
+    height: 187px;
+    border-radius: 30px 0px 0px 30px;
+    background: rgba(0, 0, 0, 0.50);
+    padding: 35px 22px 49px 18px;
+}
+
+.menu_nav_list p {
+    margin-top: 27px;
+    color: #FFF;
+
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
     /* 100% */
 }
+
+.menu_nav_list h2 {
+    color: #FFF;
+
+    font-family: YS Text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* 100% */
+    text-transform: uppercase;
+}
+
+.menu_nav_close {
+    position: absolute;
+    top: 35px;
+    right: 22px;
+}
+
+.screen.game_score_menu::before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.60);
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    z-index: 1;
+}
+
+.screen.game_score_menu.end_game::before {
+    display: none;
+}
+
+.screen.game_score_menu.end_game h1 {
+    margin-top: 33px;
+    text-align: center;
+
+    font-family: YS Text;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+
+
+
+.game_score_menu.end_game .player_score_menu .score_menu {
+    padding: 0;
+    background: none;
+    border: 0;
+    color: #000;
+    right: 40px;
+    width: 2em;
+    height: 1em;
+    top: calc(50% - (1em / 2));
+
+    font-family: Montserrat, "Arial";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.game_score_menu.end_game .winner {
+    background-color: #FFEED4;
+}
+
+.game_score_menu.end_game .winner .score_menu::after {
+    content: "WINNER";
+    position: absolute;
+    bottom: -1rem;
+    color: #000;
+
+    font-family: Montserrat, "Arial";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 16px;
+}
+
+.game_score_menu.end_game .winner .score_menu::before {
+    content: "";
+    position: absolute;
+    background-image: url("img/crown.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -35px;
+    width: 45px;
+    height: 45px;
+}
+.again_play::after {
+    content: '';
+ position: absolute;
+ top: -500%;
+ bottom: -500%;
+ right: -500%;
+ left: -500%;
+ background: rgba(0, 0, 0, 0.60);
+ z-index: -2;
+}
+
+.again_play {
+    width: 298px;
+height: 205px;
+border-radius: 30px;
+background: rgba(0, 0, 0, 0.60);
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+
+color: #FFF;
+font-family: Inter, YS Text;
+
+font-style: normal;
+font-weight: 600;
+line-height: 16px; /* 66.667% */
+text-transform: uppercase;
+
+position: absolute;
+z-index: 1;
+top: calc(50% - (205px / 2));
+left: calc(50% - (298px / 2));
+}
+.again_play h1 {
+    font-size: 24px;
+    margin-bottom: 27px;
+    margin-top: 53px;
+}
+
+.again_play h2 {
+    width: 90%;
+    border-top: 1px solid #2C2C2A;
+    color: #FFF;
+
+font-family: YS Text;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 16px; /* 88.889% */
+padding: 20px 0;
+}
+
 
 
 /* player icons*/
