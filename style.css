@@ -60,6 +60,16 @@ body {
     /* для проверки */
 
 }
+.screen.white_back::after {
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    top: -100%;
+    bottom: -100%;
+    left: -100%;
+    right: -100%;
+    z-index: -2;
+}
 
 .screen {
     width: 100%;
