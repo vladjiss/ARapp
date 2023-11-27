@@ -303,8 +303,8 @@ body {
 }
 
 .player_game {
-    min-width: 110px;
-    min-height: 110px;
+    min-width: 105px;
+    min-height: 105px;
     border-radius: 20%;
     background-color: #F8F8F8;
 }
@@ -563,7 +563,7 @@ height: 60px;
     position: absolute;
     right: 5%;
     top: 3%;
-    background-image: url("img/cancel(x).png");
+    background-image: url("img/cancel(x).svg");
     width: 24px;
     height: 24px;
 
