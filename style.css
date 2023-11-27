@@ -150,16 +150,21 @@ body {
 
 
 .nav {
+    
     position: relative;
     text-align: center;
     margin: 0px 0 2.5vh;
     padding-top: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .nav h2 {
     font-size: 22px;
     font-weight: 800;
+    
 
 }
 
@@ -167,9 +172,6 @@ body {
     position: absolute;
     border-radius: 10px;
     background: #F8F8F8;
-    width: 40px;
-    height: 40px;
-    top: 65px;
 
 
     padding: 10px;
@@ -385,6 +387,11 @@ body {
 
     width: 40px;
     height: 40px;
+}
+.game_go .nav {
+    justify-content: start;
+    height: 91.2px;
+    
 }
 
 .game_go .btn-menu {
