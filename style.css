@@ -78,9 +78,7 @@ body {
     font-family: 'YS Text', Arial, sans-serif;
 }
 
-.main_game {
-    max-height: 80%;
-}
+
 
 .loadPage {
     background: url("img/bg.png") no-repeat;
@@ -153,7 +151,7 @@ body {
     
     position: relative;
     text-align: center;
-    margin: 0px 0 2.5vh;
+    margin: 0px 0 4.9vh;
     padding-top: 64px;
     display: flex;
     justify-content: center;
@@ -169,6 +167,7 @@ body {
 }
 
 .btn-nav {
+    height: 40px;
     position: absolute;
     border-radius: 10px;
     background: #F8F8F8;
@@ -191,7 +190,7 @@ body {
 }
 
 .teamSelect h1 {
-    margin-bottom: 7vh;
+    margin-bottom: 1.9vh;
     height: 10%;
     font-size: 24px;
     font-style: normal;
@@ -738,7 +737,9 @@ height: 60px;
     line-height: 45px;
     text-transform: uppercase;
 }
-
+.end_game h1 {
+    margin-bottom: 5.5vh;
+}
 
 
 .game_score_menu.end_game .player_score_menu .score_menu {
@@ -761,6 +762,7 @@ height: 60px;
 .game_score_menu.end_game .winner {
     background-color: #FFEED4;
 }
+
 
 .game_score_menu.end_game .winner .score_menu::after {
     content: "WINNER";
@@ -931,7 +933,7 @@ padding: 20px 0;
 .end_game_img.dino_rex_img {
     width: 353px;
     height: 365px;
-    bottom: 20%;
+    bottom: 12vh;
     right: -40%;
     transform: scaleX(-1);
     z-index: 3;
@@ -941,7 +943,7 @@ padding: 20px 0;
 .end_game_img.king_kong_img {
     width: 162px;
     height: 230px;
-    bottom: 30%;
+    bottom: 25vh;
     z-index: 2;
 }
 
@@ -949,13 +951,13 @@ padding: 20px 0;
     width: 538px;
     height: 538px;
     left: -25%;
-    bottom: 20%;
+    bottom: 12vh;
 }
 
 .end_game_img.dwarf_img {
     width: 95px;
     height: 108px;
-    bottom: 20%;
+    bottom: 15vh;
     z-index: 3;
     left: 20%;
 }
@@ -964,5 +966,5 @@ padding: 20px 0;
     width: 114px;
     height: 66px;
     right: 10%;
-    top: 10%;
+    top: 15vh;
 }
