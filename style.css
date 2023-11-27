@@ -556,7 +556,7 @@ height: 60px;
     height: 48.6vh;
     margin: 0 auto;
     border-radius: 30px;
-    background-color: #d9d9d900;
+    background-color: #d9d9d9fa;
 
 }
 
@@ -605,6 +605,7 @@ height: 60px;
     top: -0.6em;
     background-image: url("img/score_player.svg");
     background-size: contain;
+    background-repeat: no-repeat;
 
     color: #FFF;
 
