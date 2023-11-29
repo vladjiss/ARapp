@@ -335,7 +335,8 @@ body {
 .footer_player .bear {
     width: 78px;
     height: 76px;
-    background-image: url("img/animals/bear 1.png");
+    background-image: url("img/animals/bear.png");
+    background-size: 130%;
 
 }
 
@@ -402,6 +403,7 @@ body {
     width: 35px;
     height: 34px;
     margin-right: 5px;
+    background-size: 150%;
 }
 
 .game_go.playing .game_nav {
@@ -476,7 +478,7 @@ body {
     border-radius: 10px;
     background-color: #FFEACB;
     width: 48%;
-    background-image: url('img/cancel.png');
+    background-image: url('img/cancel.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -485,7 +487,7 @@ body {
     border-radius: 10px;
     background-color: #1A54A0;
     width: 48%;
-    background-image: url('img/done.png');
+    background-image: url('img/done.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -942,10 +944,10 @@ padding: 20px 0;
 .end_game_img.dino_rex_img {
     width: 353px;
     height: 365px;
-    bottom: 12vh;
-    right: -40%;
+    bottom: 14vh;
+    left: 40%;
     transform: scaleX(-1);
-    z-index: 3;
+    z-index: -2;
 
 }
 
@@ -953,27 +955,30 @@ padding: 20px 0;
     width: 162px;
     height: 230px;
     bottom: 25vh;
-    z-index: 2;
+    left: -5%;
+    z-index: -2;
 }
 
 .end_game_img.tree_img {
+    
     width: 538px;
     height: 538px;
-    left: -25%;
+    left: calc(50% - (538px / 2));
     bottom: 12vh;
+    z-index: -3;
 }
 
 .end_game_img.dwarf_img {
     width: 95px;
     height: 108px;
     bottom: 15vh;
-    z-index: 3;
-    left: 20%;
+    z-index: -2;
+    left: 15%;
 }
 
 .end_game_img.dragon_img {
     width: 114px;
     height: 66px;
-    right: 10%;
+    left: 57%;
     top: 15vh;
 }

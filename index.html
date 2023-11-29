@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="screen loadPage" onclick="toggleHidden(this)"> <!--loading page -->
+    <div class="screen loadPage hidden" onclick="toggleHidden(this)"> <!--loading page -->
         <div class="load">
             <div class="load_head"></div>
             <h1>Loading</h1>
@@ -201,7 +201,7 @@
     </div>
     <div class="screen game_go playing hidden" onclick="toggleHidden(this)"><!--Dino share -->
         <div class="nav game_nav"
-            style=" width: 100%; display: flex; justify-content: space-between; align-items: center;">
+            style=" width: 100%; display: flex; justify-content: space-between; align-items: center; visibility: hidden;">
             <div class="btn-nav btn-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <path
@@ -316,46 +316,7 @@
 
 
     </div>
-    <div class="screen game_go playing hidden" onclick="toggleHidden(this)"> <!--KongKong Share -->
-        <div class="nav game_nav"
-            style=" width: 100%; display: flex; justify-content: space-between; align-items: center;">
-            <div class="btn-nav btn-menu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path
-                        d="M16.7083 9.16663H3.29167C2.85444 9.16663 2.5 9.52107 2.5 9.95829V10.0416C2.5 10.4789 2.85444 10.8333 3.29167 10.8333H16.7083C17.1456 10.8333 17.5 10.4789 17.5 10.0416V9.95829C17.5 9.52107 17.1456 9.16663 16.7083 9.16663Z"
-                        fill="black" />
-                    <path
-                        d="M16.7083 13.3334H3.29167C2.85444 13.3334 2.5 13.6878 2.5 14.125V14.2084C2.5 14.6456 2.85444 15 3.29167 15H16.7083C17.1456 15 17.5 14.6456 17.5 14.2084V14.125C17.5 13.6878 17.1456 13.3334 16.7083 13.3334Z"
-                        fill="black" />
-                    <path
-                        d="M16.7083 5H3.29167C2.85444 5 2.5 5.35444 2.5 5.79167V5.875C2.5 6.31223 2.85444 6.66667 3.29167 6.66667H16.7083C17.1456 6.66667 17.5 6.31223 17.5 5.875V5.79167C17.5 5.35444 17.1456 5 16.7083 5Z"
-                        fill="black" />
-                </svg>
-            </div>
-            <div class="player_id">
-                <div style="display: flex; align-items: center;">
-                    <div class="bear"></div>
-                    <h3>Bears</h3>
-                </div>
-
-            </div>
-            <div class="game_score">8</div>
-        </div>
-        <div class="share_container">
-            <div class="animal_image king_kong_img">
-                <div class="close"></div>
-            </div>
-            <h2>SHARE</h2>
-        </div>
-
-        <div class="footer_game">
-            <p>Done</p>
-
-        </div>
-
-
-    </div>
-    <div class="screen game_go playing end_game_cards hidden" onclick="toggleHidden(this)"><!--when end cards game -->
+    <div class="screen game_go playing end_game_cards " onclick="toggleHidden(this)"><!--when end cards game -->
         <div class="nav game_nav"
             style=" width: 100%; display: flex; justify-content: space-between; align-items: center;">
             <div class="btn-nav btn-menu">
