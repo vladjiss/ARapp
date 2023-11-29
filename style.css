@@ -523,14 +523,15 @@ body {
     height: 57.3vh;
     top: calc(35% - (57.3vh / 2));
     left: calc(50% - (35.3vh / 2));
-    padding-top: 0.6vh;
+    /* padding-top: 0.6vh; */
     
     border-radius: 30px;
-    background: rgba(0, 0, 0, 0.60);
+    /* background: rgba(0, 0, 0, 0.60); */
     z-index: 1;
+    outline: 100vh solid rgba(0, 0, 0, 0.60);
 
 }
-.share_container::after {
+/* .share_container::after {
  content: '';
  position: absolute;
  top: -100%;
@@ -539,24 +540,25 @@ body {
  left: -100%;
  background: rgba(0, 0, 0, 0.60);
  z-index: -1;
-}
+} */
 
 .animal_image {
 
     background-repeat: no-repeat;
     background-size: contain;
-    width: 100%;
     height: 80%;
     background-position: center;
 }
 
 .share_container .animal_image {
     position: relative;
-    width: 34.1vh;
-    height: 48.6vh;
+    /* width: 34.1vh;
+    height: 48.6vh; */
+    height: 47vh;
     margin: 0 auto;
-    border-radius: 30px;
-    background-color: #d9d9d9fa;
+    border-radius: 30px 30px 0 0;
+    background-color: #d9d9d900;
+    border: 5px solid rgba(0, 0, 0, 0.80);
 
 }
 
@@ -578,7 +580,13 @@ body {
     font-weight: 700;
     line-height: 16px;
     text-align: center;
-    margin-top: 24px;
+    background: rgba(0, 0, 0, 0.80);
+    padding-top: 2.8vh;
+    border-radius: 0 0 30px 30px;
+    
+    height: 10.3vh;
+
+
 }
 
 .animal_image .end_game_img {
