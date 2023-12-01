@@ -260,7 +260,7 @@ $("#choose_team .player").on("click",function(){
         choosen_teams.splice(choosen_teams.indexOf(team_number),1)
         $(this).removeClass("play_select")
     }
-    if(choosen_teams.length>0){
+    if(choosen_teams.length>1){
         $("#choose_team .footer_button").removeClass("disabled")
     }
     else {
@@ -298,6 +298,12 @@ $("#names_form .footer_button").on("click",function(){
     hideSection(SECTIONS_LIST.CHOOSE_NAMES)
     showSection(SECTIONS_LIST.WHOM_FIRST)
 })
+$("#names_form .btn-back").on("click",function(){
+    $("#names_form .name_input").val("")
+    $("#names_form .footer_button").addClass("disabled")
+    hideSection(SECTIONS_LIST.CHOOSE_NAMES)
+    showSection(SECTIONS_LIST.CHOOSE_TEAM)
+})
 //block whoms_first
 $("#whoms_first .player_game").on("click",function(){
     let team_number = Number($(this).attr("data-index"));
@@ -315,6 +321,12 @@ $("#whoms_first .footer_button").on("click",function(){
         hideSection(SECTIONS_LIST.WHOM_FIRST)
         showSection(SECTIONS_LIST.SCAN)
     },1000)
+})
+$("#whoms_first .btn-back").on("click",function(){
+    $("#whoms_first .play_select").removeClass("play_select")
+    $("#whoms_first .footer_button").addClass("disabled")
+    hideSection(SECTIONS_LIST.WHOM_FIRST)
+    showSection(SECTIONS_LIST.CHOOSE_NAMES)
 })
 //block scan
 $("#scan .footer_button").on("click",function(){
@@ -377,19 +389,20 @@ $("#next_game .next_button").on("click",function(){
         showSection(SECTIONS_LIST.SCAN)
     },1000)
 })
+//results
+$("#results .btn-back").on("click",function(){
+    hideSection(SECTIONS_LIST.RESULTS)
+
+})
+
+function hide_menu(){
+    $("#menu").addClass("hidden")
+}
+
 $("#next_game .finish_button").on("click",function(){
-    hideSection(SECTIONS_LIST.NEXT)
-    showSection(SECTIONS_LIST.RESULTS);
-    let winner = -1;
-    let max = -1;
-    choosen_teams.forEach((t)=>{
-        if(GAME["team"+t].score > max){
-            winner = t;
-            max = GAME["team"+t].score;
-        }
-    })
-    $("#results .team"+winner).addClass("winner")
-    sendMessageToApp("log winner "+winner)
+    //hideSection(SECTIONS_LIST.NEXT)
+    show_score()
+
 })
 
 
@@ -440,7 +453,27 @@ $(".photo_button").on("touchstart",function () {
     photo_tick()
     //sendMessageToApp("photo")
 })
+$(".btn-nav.btn-menu").on("click",function(){
+    $("#menu").removeClass("hidden")
+})
 
+function play_again(){
+    sendMessageToApp("reload");
+    location.reload();
+}
+function show_score(){
+    showSection(SECTIONS_LIST.RESULTS);
+    let winner = -1;
+    let max = 0;
+    choosen_teams.forEach((t)=>{
+        if(GAME["team"+t].score > max){
+            winner = t;
+            max = GAME["team"+t].score;
+        }
+    })
+    $("#results .team"+winner).addClass("winner")
+    sendMessageToApp("log winner "+winner)
+}
 
 
 let started = false;
