@@ -37,8 +37,8 @@
 }
 
 
-.screen.hidden {
-    display: none;
+.hidden {
+    display: none !important;
 }
 
 * {
@@ -257,8 +257,8 @@ body {
 }
 
 
-.player.play_select {
-    background-color: #FFEED4;
+.play_select {
+    background-color: #FFEED4 !important;
 }
 
 .players_get_names input {
@@ -279,6 +279,13 @@ body {
     line-height: 16px;
     padding: 17px 21px;
 }
+.team_logo {
+    width: 78px;
+    height: 76px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 130%;
+}
 
 .teamSelect.names .players_get_names .player_name {
     width: 100%;
@@ -291,6 +298,11 @@ body {
     align-items: center;
     justify-content: flex-end;
 
+}
+.players_get_names {
+    height: 70vh;
+    overflow: auto;
+    padding-bottom: 80px;
 }
 
 
@@ -307,6 +319,7 @@ body {
     min-height: 105px;
     border-radius: 20%;
     background-color: #F8F8F8;
+    margin-bottom: 10px;
 }
 
 .screen.game_go {
@@ -518,6 +531,9 @@ body {
     align-items: center;
 
 }
+.footer_game.video {
+    background-image: url("img/shot2.svg");
+}
 
 .share_container {
     position: relative;
@@ -604,7 +620,7 @@ body {
 }
 
 .player_game.score {
-    background-color: #FFEED4;
+    //background-color: #FFEED4;
     position: relative;
 }
 
@@ -647,6 +663,7 @@ body {
     border-radius: 22.445px;
     background-color: #F8F8F8;
     background-position: left;
+    margin-bottom: 10px;
 }
 
 .game_score_menu .player_score_menu p {
@@ -858,42 +875,42 @@ padding: 20px 0;
 
 
 /* player icons*/
-.wolf {
+.team1 {
     background-image: url("img/animals/wolf.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.bear {
+.team2 {
     background-image: url("img/animals/bear.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.penguin {
+.team3 {
     background-image: url("img/animals/penguin.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.duck {
+.team4 {
     background-image: url("img/animals/duck.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.frog {
+.team5 {
     background-image: url("img/animals/frog.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.mouse {
+.team6 {
     background-image: url("img/animals/mouse.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -901,8 +918,7 @@ padding: 20px 0;
 }
 
 /* cards */
-.dino_rex {
-    background-image: url("img/animals/dino_rex.png");
+.card_img {
     background-position: 50% 80%;
     background-repeat: no-repeat;
     background-size: 70%;
@@ -981,4 +997,25 @@ padding: 20px 0;
     height: 66px;
     left: 57%;
     top: 15vh;
+}
+.disabled {
+    pointer-events:none;
+    opacity:0.5;
+}
+.instruction {
+    width: 100%;
+    max-width: 400px;
+    position:fixed;
+    top: 20vh;
+    left: 0;
+    z-index:-1
+}
+.photo_button {
+    height: 100%;
+    aspect-ratio: 1;
+    position: absolute;
+    left: calc(50% - 30px);
+}
+#next_game .next_button {
+    bottom: 80px;
 }
