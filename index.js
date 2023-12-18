@@ -48,23 +48,133 @@ window.addEventListener('resize', function() {
 /////////////////////////////////////
 let CARDS = [{
     step:0,
-    words: ["img/sketches/m1102_s.jpg",
-            "img/sketches/m3_s.jpg",
-            "img/sketches/m50_s.jpg"],
+    words: ["img/sketches/m6_s.jpg",
+            "img/sketches/m18_s.jpg",
+            "img/sketches/m20_s.jpg",
+            "img/sketches/m29_s.jpg",
+            "img/sketches/m36_s.jpg",
+            "img/sketches/m45_s.jpg",
+            "img/sketches/m50_s.jpg",
+            "img/sketches/m51_s.jpg",
+            "img/sketches/m53_s.jpg",
+            "img/sketches/m66_s.jpg"],
     guessed:[]
 }, {
     step:0,
-    words:
-        ["Ваза",
-            "Нога",
-            "Телефон",
-            "Дверь",
-            "Яблоко",
-            "Кондиционер",
-            "Свитер",
-            "Кровать",
-            "Полотенце",
-            "Носок"],
+    words: ["img/sketches/m48_s.jpg",
+        "img/sketches/m54_s.jpg",
+        "img/sketches/m55_s.jpg",
+        "img/sketches/m69_s.jpg",
+        "img/sketches/m76_s.jpg",
+        "img/sketches/m82_s.jpg",
+        "img/sketches/m85_s.jpg",
+        "img/sketches/m87_s.jpg",
+        "img/sketches/m96_s.jpg",
+        "img/sketches/m98_s.jpg"],
+    guessed:[]
+}, {
+    step:0,
+    words: ["img/sketches/m25_s.jpg",
+        "img/sketches/m37_s.jpg",
+        "img/sketches/m52_s.jpg",
+        "img/sketches/m56_s.jpg",
+        "img/sketches/m68_s.jpg",
+        "img/sketches/m70_s.jpg",
+        "img/sketches/m74_s.jpg",
+        "img/sketches/m75_s.jpg",
+        "img/sketches/m78_s.jpg",
+        "img/sketches/m101_s.jpg"],
+    guessed:[]
+}, {
+    step:0,
+    words: ["img/sketches/m79_s.jpg",
+        "img/sketches/m21_s.jpg",
+        "img/sketches/m23_s.jpg",
+        "img/sketches/m2_s.jpg",
+        "img/sketches/m4_s.jpg",
+        "img/sketches/m5_s.jpg",
+        "img/sketches/m7_s.jpg",
+        "img/sketches/m9_s.jpg",
+        "img/sketches/m10_s.jpg",
+        "img/sketches/m11_s.jpg"],
+    guessed:[]
+}, {
+    step:0,
+    words: ["img/sketches/m12_s.jpg",
+        "img/sketches/m13_s.jpg",
+        "img/sketches/m14_s.jpg",
+        "img/sketches/m15_s.jpg",
+        "img/sketches/m16_s.jpg",
+        "img/sketches/m22_s.jpg",
+        "img/sketches/m24_s.jpg",
+        "img/sketches/m26_s.jpg",
+        "img/sketches/m27_s.jpg",
+        "img/sketches/m30_s.jpg"],
+    guessed:[]
+}, {
+    step:0,
+    words: ["img/sketches/m31_s.jpg",
+        "img/sketches/m32_s.jpg",
+        "img/sketches/m33_s.jpg",
+        "img/sketches/m34_s.jpg",
+        "img/sketches/m35_s.jpg",
+        "img/sketches/m38_s.jpg",
+        "img/sketches/m39_s.jpg",
+        "img/sketches/m40_s.jpg",
+        "img/sketches/m41_s.jpg",
+        "img/sketches/m42_s.jpg"],
+    guessed:[]
+}, {
+    step:0,
+    words: ["img/sketches/m43_s.jpg",
+        "img/sketches/m44_s.jpg",
+        "img/sketches/m57_s.jpg",
+        "img/sketches/m58_s.jpg",
+        "img/sketches/m59_s.jpg",
+        "img/sketches/m60_s.jpg",
+        "img/sketches/m62_s.jpg",
+        "img/sketches/m63_s.jpg",
+        "img/sketches/m64_s.jpg",
+        "img/sketches/m65_s.jpg"],
+    guessed:[]
+}, {
+    step:0,
+    words: ["img/sketches/m67_s.jpg",
+        "img/sketches/m71_s.jpg",
+        "img/sketches/m72_s.jpg",
+        "img/sketches/m73_s.jpg",
+        "img/sketches/m77_s.jpg",
+        "img/sketches/m81_s.jpg",
+        "img/sketches/m83_s.jpg",
+        "img/sketches/m84_s.jpg",
+        "img/sketches/m86_s.jpg",
+        "img/sketches/m88_s.jpg"],
+    guessed:[]
+}, {
+    step:0,
+    words: ["img/sketches/m89_s.jpg",
+        "img/sketches/m90_s.jpg",
+        "img/sketches/m91_s.jpg",
+        "img/sketches/m92_s.jpg",
+        "img/sketches/m93_s.jpg",
+        "img/sketches/m94_s.jpg",
+        "img/sketches/m95_s.jpg",
+        "img/sketches/m97_s.jpg",
+        "img/sketches/m100_s.jpg",
+        "img/sketches/m102_s.jpg"],
+    guessed:[]
+}, {
+    step:0,
+    words: ["img/sketches/m3_s.jpg",
+        "img/sketches/m8_s.jpg",
+        "img/sketches/m17_s.jpg",
+        "img/sketches/m19_s.jpg",
+        "img/sketches/m28_s.jpg",
+        "img/sketches/m46_s.jpg",
+        "img/sketches/m49_s.jpg",
+        "img/sketches/m61_s.jpg",
+        "img/sketches/m80_s.jpg",
+        "img/sketches/m103_s.jpg"],
     guessed:[]
 }];
 const STEPS = {
@@ -105,10 +215,11 @@ function hideSection(section){
 }
 function buildTeams() {
     console.log("buildTeams")
-    $("#names_form .player_name, #whoms_first .player_game, #next_game .player_game, #results .player_score_menu").addClass("hidden");
+    $("#names_form .player_name, #whoms_first .player_score_menu, #next_game .player_game, #results .player_score_menu").addClass("hidden");
     choosen_teams.forEach((t)=>{
         $("#names_form .team"+t+", #whoms_first .team"+t+", #next_game .team"+t+", #results .team"+t).removeClass("hidden");
         $("#results .team"+t+" p").text(teams[t]);
+        $("#whoms_first .team"+t+" p").text(teams[t]);
     })
 }
 function startGame() {
@@ -214,7 +325,9 @@ function accept(card){
     hideSection(SECTIONS_LIST.CARD)
     showSection(SECTIONS_LIST.SHOW)
 }
+let interval_new_scene;
 function finish(card){
+    clearInterval(interval_new_scene);
     game_step = STEPS.SHOW_ALL;
     GAME.round++;
     console.log("finish")
@@ -245,6 +358,25 @@ function finish(card){
     },9500)
     //showSection(SECTIONS_LIST.SHOW)
     sendMessageToApp('finish');
+    setTimeout(function(){
+        interval_new_scene = setInterval(function (){
+            if($(".loadPage").hasClass("hidden")){
+                clearInterval(interval_new_scene);
+                let once = false;
+                //$("body").on("click",function () {
+                    if(!once) {
+                        once = true;
+                        setTimeout(function () {
+
+                            card.guessed.forEach((elem) => {
+                                sendMessageToApp('show' + elem);
+                            })
+                        }, 1000)
+                    }
+                //})
+            }
+        },200)
+    },1000);
     choosen_teams.forEach((t)=>{
         $("#next_game .team"+t+" .score_result").text(GAME["team"+t].score);
     })
@@ -305,9 +437,9 @@ $("#names_form .btn-back").on("click",function(){
     showSection(SECTIONS_LIST.CHOOSE_TEAM)
 })
 //block whoms_first
-$("#whoms_first .player_game").on("click",function(){
+$("#whoms_first .player_score_menu").on("click",function(){
     let team_number = Number($(this).attr("data-index"));
-    $("#whoms_first .player_game").removeClass("play_select")
+    $("#whoms_first .player_score_menu").removeClass("play_select")
     if(choosen_teams.includes(team_number)){
         GAME.current_team = team_number;
         $(this).addClass("play_select")
@@ -320,6 +452,7 @@ $("#whoms_first .footer_button").on("click",function(){
     setTimeout(function(){
         hideSection(SECTIONS_LIST.WHOM_FIRST)
         showSection(SECTIONS_LIST.SCAN)
+        $(".instruction_card").removeClass("hidden");
     },1000)
 })
 $("#whoms_first .btn-back").on("click",function(){
@@ -331,6 +464,7 @@ $("#whoms_first .btn-back").on("click",function(){
 //block scan
 $("#scan .footer_button").on("click",function(){
     $("#scan .footer_button").addClass("disabled");
+    $("#scan .footer_player").addClass("hidden");
     startCart(CARDS[GAME.current_card]);
     hideSection(SECTIONS_LIST.SCAN)
     showSection(SECTIONS_LIST.CARD)
@@ -387,6 +521,7 @@ $("#next_game .next_button").on("click",function(){
     setTimeout(function(){
         hideSection(SECTIONS_LIST.NEXT)
         showSection(SECTIONS_LIST.SCAN)
+        $(".instruction_card").removeClass("hidden");
     },1000)
 })
 //results
@@ -480,6 +615,7 @@ let started = false;
 let closeLoadingTimeout;
 let instruactionTimeout;
 window.addEventListener('message', (msg) => {
+    let first_game = true;
     msg = msg.data;
     console.log("receiveMessage "+msg)
     //console.log(JSON.stringify(msg))
@@ -487,6 +623,8 @@ window.addEventListener('message', (msg) => {
         case "planeDetected":
             if(game_step == STEPS.SCAN_FLOOR) {
                 game_step = STEPS.TAP_FLOOR;
+
+                first_game = false;
                 $(".instruction_place").addClass("hidden");
                 $(".instruction_tap").removeClass("hidden");
                 /*let once = false;
@@ -502,7 +640,7 @@ window.addEventListener('message', (msg) => {
             break;
     }
     if(msg.includes("onContentLoading")){
-        let progress = Number(msg.split(" ")[1])*100;
+        let progress = Math.round((msg.split(" ")[1])*100);
         console.log("onContentLoading "+progress)
         $(".loadPage").removeClass("hidden");
         percentElement.innerText = progress + '%';
@@ -517,27 +655,34 @@ window.addEventListener('message', (msg) => {
     }
     if(msg.includes("cardDetected")){
         game_step = STEPS.SCAN_FLOOR;
-        let num = Number(msg.split(" ")[1])*100;
+        let num = Number(msg.split(" ")[1]);
         console.log("cardDetected "+num);
         setTimeout(function(){
+            $(".instruction_card").addClass("hidden");
             sendMessageToApp("log game_step "+(game_step == STEPS.SCAN_FLOOR))
             if(game_step == STEPS.SCAN_FLOOR)
                 $(".instruction_place").removeClass("hidden");
-            setTimeout(function(){
-                $(".instruction_place").addClass("hidden");
-            },3000)
+            if(!first_game) {
+                setTimeout(function () {
+                    $(".instruction_place").addClass("hidden");
+                }, 3000)
+            }
             let once = false;
             $("body").on("click", function () {
                 if (!once) {
                     once = true;
                     $(".instruction_tap").addClass("hidden");
                     $(".instruction_place").addClass("hidden");
+                    $("#scan .footer_player").removeClass("hidden");
                     $("#scan .footer_button").removeClass("disabled");
                 }
             })
         },1000)
-        GAME.current_card = Number(num);
+        GAME.current_card = num;
         //$(".loadPage").addClass("hidden");
+    }
+    if(msg.includes("scenePlaced")){
+        sendMessageToApp("log "+"scenePlaced ")
     }
 });
 function sendMessageToApp(msg){

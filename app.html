@@ -11,6 +11,13 @@
 <!--
   <script src="console-log-viewer.js?minimized=true&align=bottom"></script>
 -->
+  <!-- Console -->
+  <script>if(window.location.href.includes("debug=true")){
+    console.log("DEBUG")
+    var my_awesome_script = document.createElement('script');
+    my_awesome_script.setAttribute('src','console-log-viewer.js?minimized=true&align=bottom');
+    document.head.appendChild(my_awesome_script);
+  } </script>
   <style>
     html,body {
       overflow: hidden;
@@ -63,6 +70,16 @@
     console.log(msg)
     sendMessageToFrame(msg)
   }
+  function onPhotoDone(url){
+    console.log("onPhotoDone")
+    console.log(url)
+    NativeInterface.openUrl(url)
+  }
+  function onVideoDone(url){
+    console.log("onVideoDone")
+    console.log(url)
+    NativeInterface.openUrl(url)
+  }
 
   function isIOS() {
     if (/iPad|iPhone|iPod/.test(navigator.platform)) {
@@ -73,6 +90,7 @@
               /MacIntel/.test(navigator.platform);
     }
   }
+
 
 </script>
 </body>
