@@ -1167,3 +1167,89 @@ padding: 20px 0;
     overflow: auto;
     height: 55vh;
 }
+#name_card {
+    margin-top: 30px;
+    color: #000;
+
+text-align: center;
+font-family: "Annie Use Your Telescope";
+font-size: 50px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+}
+/*animation*/
+.players_choise .player.anim_in_player_quantity {
+    animation: inPlayerBottom 2s;   
+     
+}
+
+.players_choise .player.play_select {
+    animation: bounce 2s;   
+     
+}
+.players_get_names .player_name.anim_player_letsname {
+    animation: inPlayerLeft 1s;
+}
+.players_get_names .player_name.anim_first_player {
+    animation: bounceName 2s 3;
+}
+.name_input.input_animation {
+    animation: nameRed 1s 6;
+}
+@keyframes inPlayerBottom {
+    from{
+        margin-top: 200%;
+    }
+    70% {
+        margin-top: 200%;
+    }
+    
+}
+@keyframes nameRed {
+    from {
+        color: red;
+    }
+}
+
+@keyframes inPlayerLeft {
+    from{
+        margin-left: -100%;
+    }
+    
+    
+}
+@keyframes bounce {
+    10%{background-position:50% 35%;}
+    20%{background-position:50% 50%;}
+    30%{background-position:50% 35%;}
+    40%{background-position:50% 50%;}
+    50%{background-position:50% 35%;}
+    60%{background-position:50% 50%;}
+    70%{background-position:50% 35%;}
+    80%{background-position:50% 50%;}
+    90%{background-position:50% 35%;}
+    
+}
+@keyframes bounceName {
+    10%{background-position:7% 35%;}
+    20%{background-position:7% 50%;}
+    30%{background-position:7% 35%;}
+    40%{background-position:7% 50%;}
+    50%{background-position:7% 35%;}
+    60%{background-position:7% 50%;}
+    70%{background-position:7% 35%;}
+    80%{background-position:7% 50%;}
+    90%{background-position:7% 35%;}
+    
+}
+@keyframes inPlayer {
+    from{
+        margin-top: 200%;
+    }
+    70% {
+        margin-top: 200%;
+    }
+    
+}

@@ -694,3 +694,32 @@ $(document).ready(function () {
         $(".loadPage").addClass("hidden");
     },1000)
 })
+
+function playStartScreenAnimations() {
+    let players = document.getElementById('choose_team').querySelectorAll('.player');
+    players.forEach(player => player.classList.add("anim_in_player_quantity"));
+    setTimeout(() => {
+        players.forEach(player => player.classList.remove("anim_in_player_quantity"));
+    }, 2000);
+}
+
+function playTeamNameElement(elem) {
+    let players = document.getElementById('names_form').querySelectorAll('.player_name');
+    players.forEach(player => player.classList.add("anim_player_letsname"));
+    setTimeout(() => {
+        players.forEach(player => player.classList.remove("anim_player_letsname"));
+        let firtsPlayer = true;
+        i = 0;
+        while(firtsPlayer) {
+            if(!players[i].classList.contains('hidden')) {
+                players[i].classList.add('anim_first_player');
+                players[i].querySelector('.name_input').classList.add('input_animation')
+                players[i].querySelector('.name_input').value = "Гномы";
+                firtsPlayer = false;
+            }
+            i++;
+        }
+    }, 1000);
+
+    
+}
