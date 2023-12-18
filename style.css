@@ -88,7 +88,7 @@ body {
 
 
 .loadPage {
-    background-image: url("img/_дизайн.png");
+    background-image: url("img/bg_loadpage.png");
     background-color: #096aca;
     background-size: contain;
     position: relative;
@@ -316,6 +316,11 @@ box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
     font-weight: 500;
     line-height: 16px;
     padding: 17px 21px;
+}
+.player_id .team_logo {
+    width: 46px;
+    height: 44px;
+    background-size: 95%;
 }
 .player-info .team_logo {
     width: 78px;
