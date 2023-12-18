@@ -1,3 +1,6 @@
-<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="17" cy="17" r="17" fill="#FFD114"/>
+<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Content/Image">
+<circle id="Fill" cx="19" cy="19" r="17" fill="#FF825A"/>
+<path id="Border" d="M23.1443 2.15637C8.40694 1.6003 2.01861 10.9961 2.00003 18.8959C1.98145 26.7957 10.2879 35.791 18.8649 35.7608C27.442 35.7306 36.0606 28.6934 35.7298 18.8959C35.399 9.09842 29.2617 5.35416 22.5187 4.51997" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
 </svg>

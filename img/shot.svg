@@ -1,3 +1,5 @@
-<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="30" cy="30" r="28" stroke="white" stroke-width="4"/>
+<svg width="63" height="64" viewBox="0 0 63 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Content/Image">
+<path id="Border" d="M38.6787 2.15917C12.4171 1.16825 7.84609 13.4408 4.60819 18.6908C1.37029 23.9408 0.558202 37.788 7.03202 47.1538C9.91291 51.3216 15.9514 56.083 20.1532 58.5108C25.115 61.3776 30.0363 62.0634 31.0528 62.0415C46.3369 61.9877 61.6953 49.4475 61.1058 31.9886C60.5164 14.5297 51.0248 7.35395 41.1309 3.50146" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
 </svg>

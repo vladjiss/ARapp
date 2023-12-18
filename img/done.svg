@@ -1,3 +1,5 @@
-<svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M29.75 6.6L14.522 21L5 12L8.807 8.4L14.5197 13.8L25.943 3L29.75 6.6Z" fill="#80FF60"/>
+<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon/Check">
+<path id="Shape" d="M6.20012 16.5241H5.62103C6.60079 18.5421 12.6523 30.2029 14.8658 30.2029C17.0794 30.2029 24.4455 21.1756 32.3783 7.80273C26.1454 16.15 20.3832 25.6618 16.2861 27.7715C15.2444 28.3079 10.5404 21.4409 6.20012 16.5241Z" stroke="#80FF60" stroke-width="6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
 </svg>
