@@ -694,7 +694,7 @@ $(document).ready(function () {
         $(".loadPage").addClass("hidden");
     },1000)
 })
-
+// при включении экрана выбора персов
 function playStartScreenAnimations() {
     let players = document.getElementById('choose_team').querySelectorAll('.player');
     players.forEach(player => player.classList.add("anim_in_player_quantity"));
@@ -702,7 +702,7 @@ function playStartScreenAnimations() {
         players.forEach(player => player.classList.remove("anim_in_player_quantity"));
     }, 2000);
 }
-
+// при включении наименований персов 
 function playTeamNameElement(elem) {
     let players = document.getElementById('names_form').querySelectorAll('.player_name');
     players.forEach(player => player.classList.add("anim_player_letsname"));
