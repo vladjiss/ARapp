@@ -345,21 +345,17 @@ animation: activeBtn 1s;
 }
 
 .teamSelect.names .players_get_names .player_name {
-    width: 97%;
+    width:100%;
     min-height: 110px;
     background-position: 7% 50%;
     background-size: 20%;
     border-radius: 22.445px;
-    background-color: #FFEED4;
-    border: 2px solid #000000;
     margin: 10px 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
-    -webkit-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
--moz-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
+    
 
 }
 .players_get_names {
@@ -744,14 +740,9 @@ text-transform: uppercase;
     background-size: 20%;
     min-height: 110px;
     border-radius: 22.445px;
-    background-color: #ffffff;
-    border: 2px solid #000000;
     background-position: 10% 50%;
     margin-bottom: 10px;
-    width: 98%;
-    -webkit-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
--moz-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
+    width: 100%;
 }
 
 .game_score_menu .player_score_menu p {
@@ -876,9 +867,7 @@ text-transform: uppercase;
     line-height: 16px;
 }
 
-.game_score_menu.end_game .winner {
-    background-color: #FFEED4;
-}
+
 
 
 .game_score_menu.end_game .winner .score_menu::after {
@@ -1177,21 +1166,60 @@ padding: 20px 0;
     min-height: 106.14px;
     background: url('img/player_rounded_select.png') 50% / contain no-repeat;
 }
+#results .main_game {
+    overflow: auto;
+    height: 56vh;
+}
 .results .main_game {
     overflow: auto;
-    height: 55vh;
+    height: 54vh;
 }
 #name_card {
     margin-top: 30px;
     color: #000;
+    line-height: 38px;
 
 text-align: center;
 font-family: "Annie Use Your Telescope";
-font-size: 50px;
+font-size: 46px;
 font-style: normal;
 font-weight: 400;
-line-height: normal;
 text-transform: uppercase;
+}
+.player_wrapper {
+    position: relative;
+    width: 97%;
+    background: url('img/player_bg_maxwidth.png') 50% / 100% 100% no-repeat;
+}
+.player_wrapper::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 4px;
+    left: 2px;
+    background: url("img/bg_shadow.png") 50% / 100% 100% no-repeat;
+}
+
+.player_wrapper_score {
+    position: relative;
+    width: 97%;
+    background: url('img/player_bg_maxwidth_white.png') 50% / 100% 100% no-repeat;
+}
+.player_wrapper_score::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 4px;
+    left: 2px;
+    background: url("img/bg_shadow.png") 50% / 100% 100% no-repeat;
+}
+.player_wrapper_score.winner {
+    width: 97%;
+    background: url('img/player_bg_maxwidth.png') 50% / 100% 100% no-repeat;
 }
 /*animation*/
 .players_choise .player.anim_in_player_quantity {
@@ -1203,7 +1231,7 @@ text-transform: uppercase;
     animation: bounce 2s;   
      
 }
-.players_get_names .player_name.anim_player_letsname {
+.players_get_names .player_wrapper.anim_player_letsname {
     animation: inPlayerLeft 1s;
 }
 .players_get_names .player_name.anim_first_player {

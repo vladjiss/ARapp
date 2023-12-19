@@ -704,18 +704,23 @@ function playStartScreenAnimations() {
 }
 // при включении наименований персов 
 function playTeamNameElement(elem) {
-    let players = document.getElementById('names_form').querySelectorAll('.player_name');
+    let players = document.getElementById('names_form').querySelectorAll('.player_wrapper');
     players.forEach(player => player.classList.add("anim_player_letsname"));
     setTimeout(() => {
         players.forEach(player => player.classList.remove("anim_player_letsname"));
         let firtsPlayer = true;
         i = 0;
         while(firtsPlayer) {
-            if(!players[i].classList.contains('hidden')) {
-                players[i].classList.add('anim_first_player');
+            if(!players[i].querySelector('.player_name').classList.contains('hidden')) {
+                players[i].querySelector('.player_name').classList.add('anim_first_player');
+                setTimeout(() => {
+                    players.forEach((player) => player.querySelector('.player_name').classList.remove('anim_first_player'));
+                    players.forEach((player) => player.querySelector('.name_input').classList.remove('input_animation'));
+                }, 4000);
                 players[i].querySelector('.name_input').classList.add('input_animation')
                 players[i].querySelector('.name_input').value = "Гномы";
                 firtsPlayer = false;
+                
             }
             i++;
         }

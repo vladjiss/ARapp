@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div class="screen loadPage " onclick="toggleHidden(this)"> <!--loading page -->
+    <div class="screen loadPage" onclick="toggleHidden(this)"> <!--loading page -->
         <div class="load">
             <h1>ImginatiON</h1>
             <div class="progressbar">
@@ -33,7 +33,7 @@
             <p>Enjoy special AR game created by Yandex Ads</p>
         </div>
     </div>
-    <div id="choose_team" class="screen teamSelect choise white_back " onclick="toggleHidden(this)"><!--quantity of teams -->
+    <div id="choose_team" class="screen teamSelect choise white_back" onclick="toggleHidden(this)"><!--quantity of teams -->
         <div class="nav">
             <div class="btn-nav btn-back hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -69,12 +69,13 @@
         <div class="main_game">
             <h1>let's name the team</h1>
             <div class="players_get_names">
-                <div class="player_name wolf team1"><input class="name_input" placeholder="Team 1" type="text" data-index=1></div>
-                <div class="player_name bear team2"><input class="name_input" placeholder="Team 2" type="text" data-index=2></div>
-                <div class="player_name penguin team3"><input class="name_input" placeholder="Team 3" type="text" data-index=3></div>
-                <div class="player_name duck team4"><input class="name_input" placeholder="Team 4" type="text" data-index=4></div>
-                <div class="player_name frog team5"><input class="name_input" placeholder="Team 5" type="text" data-index=5></div>
-                <div class="player_name mouse team6"><input class="name_input" placeholder="Team 6" type="text" data-index=6></div>
+                
+                <div class="player_wrapper"><div class="player_name wolf team1"><input class="name_input" placeholder="Team 1" type="text" data-index=1></div></div>
+                <div class="player_wrapper"><div class="player_name bear team2"><input class="name_input" placeholder="Team 2" type="text" data-index=2></div></div>
+                <div class="player_wrapper"><div class="player_name penguin team3"><input class="name_input" placeholder="Team 3" type="text" data-index=3></div></div>
+                <div class="player_wrapper"><div class="player_name duck team4"><input class="name_input" placeholder="Team 4" type="text" data-index=4></div></div>
+                <div class="player_wrapper"><div class="player_name frog team5"><input class="name_input" placeholder="Team 5" type="text" data-index=5></div></div>
+                <div class="player_wrapper"><div class="player_name mouse team6"><input class="name_input" placeholder="Team 6" type="text" data-index=6></div></div>
             </div>
         </div>
         <div class="footer_button disabled">next</div>
@@ -156,7 +157,7 @@
                 <div style="width: 90%; margin: 0 auto;">
                     <div class="timer">00:<span class="seconds">59</span></div>
                     <p>Explain the word in the picture without words</p>
-                    <h2 id="name_card">t-rex</h2>
+                    <h2 id="name_card">T-rex</h2>
 
                 </div>
             </div>
@@ -446,12 +447,12 @@
         <h1>GAME SCORE</h1>
         <div class="main_game">
             <div class="players_score">
-                <div class="player_score_menu wolf team1 winner" data-index=1><p>Bears</p><div class="score_menu">0</div></div>
-                <div class="player_score_menu bear team2" data-index=2><p>LOL</p><div class="score_menu">0</div></div>
-                <div class="player_score_menu penguin team3" data-index=3><p>PiPiPi</p><div class="score_menu">0</div></div>
-                <div class="player_score_menu duck team4" data-index=4><p>Bears</p><div class="score_menu">0</div></div>
-                <div class="player_score_menu frog team5" data-index=5><p>LOL</p><div class="score_menu">0</div></div>
-                <div class="player_score_menu mouse team6" data-index=6><p>PiPiPi</p><div class="score_menu">0</div></div>
+                <div class="player_wrapper_score winner"><div class="player_score_menu wolf team1 winner" data-index=1><p>Bears</p><div class="score_menu">0</div></div></div>
+                <div class="player_wrapper_score"><div class="player_score_menu bear team2" data-index=2><p>LOL</p><div class="score_menu">0</div></div></div>
+                <div class="player_wrapper_score"><div class="player_score_menu penguin team3" data-index=3><p>PiPiPi</p><div class="score_menu">0</div></div></div>
+                <div class="player_wrapper_score"><div class="player_score_menu duck team4" data-index=4><p>Bears</p><div class="score_menu">0</div></div></div>
+                <div class="player_wrapper_score"><div class="player_score_menu frog team5" data-index=5><p>LOL</p><div class="score_menu">0</div></div></div>
+                <div class="player_wrapper_score"><div class="player_score_menu mouse team6" data-index=6><p>PiPiPi</p><div class="score_menu">0</div></div></div>
             </div>
         </div>
         <div class="footer_button">play again</div>
