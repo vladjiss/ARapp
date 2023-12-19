@@ -725,6 +725,19 @@ function playTeamNameElement(elem) {
             i++;
         }
     }, 1000);
+}
 
-    
+//при угадывании карточки анимация игрока и ротейшн баллов
+function bounceLogoTeam() {
+    let logo = document.getElementById('card').querySelector('.team_logo');
+    logo.classList.add('anim');
+    setTimeout(() =>{
+        logo.classList.remove('anim');
+    },2000)
+
+    let score = document.getElementById('card').querySelector('.game_score');
+    score.classList.add('anim');
+    setTimeout(() =>{
+        score.classList.remove('anim');
+    },2000)
 }

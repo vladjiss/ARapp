@@ -548,6 +548,7 @@ animation: activeBtn 1s;
 }
 
 .btn_no {
+    transition: 0.2s;
     border-radius: 10px;
     background-color: #FFEACB;
     width: 48%;
@@ -561,6 +562,7 @@ box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
 }
 
 .btn_yes {
+    transition: 0.2s;
     border-radius: 10px;
     background-color: #1A54A0;
     width: 48%;
@@ -571,6 +573,21 @@ box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
     -webkit-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
 -moz-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
 box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
+}
+
+.btn_no:active {
+    transition: 0.2s;
+    -webkit-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0);
+-moz-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0);
+box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0);
+transform: translate(5px, 5px);
+}
+.btn_yes:active {
+    transition: 0.2s;
+    -webkit-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0);
+-moz-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0);
+box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0);
+transform: translate(5px, 5px);
 }
 
 
@@ -1240,6 +1257,30 @@ text-transform: uppercase;
 .name_input.input_animation {
     animation: nameRed 1s 6;
 }
+.player_id .team_logo.anim {
+    animation: bounce 2.5s 1;
+}
+.game_score.anim {
+    animation: rotateScore 1s ;
+}
+@keyframes rotateScore {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-7deg) translateX(-5px);
+    }
+    60% {
+        transform: rotate(-7deg) translateX(-5px) translateY(-5px);
+    }
+    70% {
+        transform: rotate(-7deg) translateX(-5px) translateY(5px);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 @keyframes inPlayerBottom {
     from{
         margin-top: 200%;
