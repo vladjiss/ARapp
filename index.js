@@ -779,14 +779,3 @@ let sounds = [
     }
   }
   window.addEventListener("click", playMusic);
-
-  function checkMuteStatus() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        music.muted = true;
-        timerSound.muted = true;
-    } else {
-        music.muted = false;
-        timerSound.muted = false;
-    }
-  }
-  window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', checkMuteStatus);
