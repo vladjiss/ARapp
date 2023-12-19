@@ -741,3 +741,31 @@ function bounceLogoTeam() {
         score.classList.remove('anim');
     },2000)
 }
+// звуки таймера
+let music = document.getElementById('music');
+let timerSound = document.getElementById('sound_timer');
+function startTimerSound() {
+    music.volume = 0.2;
+    timerSound.play();
+}
+function stopTimerSound() {
+    music.volume = 1;
+    timerSound.pause();
+}
+
+//звуки кнопок 
+let sounds = [
+    'sounds/buttons/Button1.wav',
+    'sounds/buttons/Button2.wav',
+    'sounds/buttons/Button3.wav',
+    'sounds/buttons/Button4.wav',
+    'sounds/buttons/Button5.wav',
+    'sounds/buttons/Button6.wav',
+    'sounds/buttons/Button7.wav'
+  ];
+
+  function onPlayBtnSound() {
+    var randomIndex = Math.floor(Math.random() * sounds.length);
+    var audio = new Audio(sounds[randomIndex]);
+    audio.play();
+  }
