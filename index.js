@@ -742,8 +742,8 @@ function bounceLogoTeam() {
     },2000)
 }
 // звуки таймера
-let music = document.getElementById('music');
-let timerSound = document.getElementById('sound_timer');
+const music = document.getElementById('music');
+const timerSound = document.getElementById('sound_timer');
 function startTimerSound() {
     music.volume = 0.2;
     timerSound.play();
@@ -768,4 +768,9 @@ let sounds = [
     var randomIndex = Math.floor(Math.random() * sounds.length);
     var audio = new Audio(sounds[randomIndex]);
     audio.play();
+  }
+
+  //включение фоновой музыки
+  function playMusic() {
+    music.play();
   }

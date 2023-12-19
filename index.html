@@ -23,11 +23,11 @@
 
 <body>
 
-    <audio id="music" autoplay loop preload="auto">
+    <audio id="music" autoplay="autoplay" loop>
         <source src="sounds/PuzzleGame.wav" type="audio/wav">
     </audio>
 
-    <audio id="sound_timer" loop preload="auto">
+    <audio id="sound_timer" loop>
         <source src="sounds/Timer.wav" type="audio/wav">
     </audio>
       
@@ -65,7 +65,7 @@
                 <div class="player mouse team6" data-index=6></div>
             </div>
         </div>
-        <div class="footer_button disabled" onclick="onPlayBtnSound()">next</div>
+        <div class="footer_button disabled" onclick="onPlayBtnSound(), playMusic() ">next</div>
     </div>
     <div id="names_form" class="screen teamSelect names  white_back hidden" onclick="toggleHidden(this)"><!--lets name the team -->
         <div class="nav">
