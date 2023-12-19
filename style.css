@@ -262,19 +262,9 @@ box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
 
 }
 .footer_button:active {
-animation: activeBtn 1s;
+    background-color: #1955a3;
 }
 
-@keyframes activeBtn {
-    0%{transform: rotate(0deg);}
-    
-    30%{transform: rotate(2deg);}
-    60%{transform: rotate(-2deg);}
-    
-    100%{transform: rotate(0deg);}
-    
-    
-}
 
 .players_choise {
     display: flex;
@@ -548,7 +538,6 @@ animation: activeBtn 1s;
 }
 
 .btn_no {
-    transition: 0.2s;
     border-radius: 10px;
     background-color: #FFEACB;
     width: 48%;
@@ -562,7 +551,6 @@ box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
 }
 
 .btn_yes {
-    transition: 0.2s;
     border-radius: 10px;
     background-color: #1A54A0;
     width: 48%;
@@ -576,18 +564,10 @@ box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
 }
 
 .btn_no:active {
-    transition: 0.2s;
-    -webkit-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0);
--moz-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0);
-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0);
-transform: translate(5px, 5px);
+    background-color: #beae95;
 }
 .btn_yes:active {
-    transition: 0.2s;
-    -webkit-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0);
--moz-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0);
-box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0);
-transform: translate(5px, 5px);
+    background-color: #12407a;
 }
 
 
