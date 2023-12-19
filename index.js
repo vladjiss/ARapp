@@ -774,3 +774,4 @@ let sounds = [
   function playMusic() {
     music.play();
   }
+  window.addEventListener("click", playMusic);
