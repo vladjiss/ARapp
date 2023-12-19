@@ -718,7 +718,7 @@ function playTeamNameElement(elem) {
                     players.forEach((player) => player.querySelector('.name_input').classList.remove('input_animation'));
                 }, 4000);
                 players[i].querySelector('.name_input').classList.add('input_animation')
-                players[i].querySelector('.name_input').value = "Гномы";
+                players[i].querySelector('.name_input').value = "Funtasticals";
                 firtsPlayer = false;
                 
             }
