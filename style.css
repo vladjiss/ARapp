@@ -1237,6 +1237,10 @@ text-transform: uppercase;
 .player_wrapper_score.winner {
     width: 97%;
     background: url('img/player_bg_maxwidth.png') 50% / 100% 100% no-repeat;
+    
+}
+.player_score_menu.winner {
+    animation: bounceWin 2s infinite;
 }
 /*animation*/
 .players_choise .player.anim_in_player_quantity {
@@ -1325,6 +1329,18 @@ text-transform: uppercase;
     70%{background-position:7% 35%;}
     80%{background-position:7% 50%;}
     90%{background-position:7% 35%;}
+    
+}
+@keyframes bounceWin {
+    10%{background-position:10% 35%;}
+    20%{background-position:10% 50%;}
+    30%{background-position:10% 35%;}
+    40%{background-position:10% 50%;}
+    50%{background-position:10% 35%;}
+    60%{background-position:10% 50%;}
+    70%{background-position:10% 35%;}
+    80%{background-position:10% 50%;}
+    90%{background-position:10% 35%;}
     
 }
 @keyframes inPlayer {
