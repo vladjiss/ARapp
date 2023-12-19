@@ -767,11 +767,26 @@ let sounds = [
   function onPlayBtnSound() {
     var randomIndex = Math.floor(Math.random() * sounds.length);
     var audio = new Audio(sounds[randomIndex]);
-    audio.play();
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        audio.play(); 
+    }
   }
 
   //включение фоновой музыки
   function playMusic() {
-    music.play();
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        music.play();
+    }
   }
   window.addEventListener("click", playMusic);
+
+  function checkMuteStatus() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        music.muted = true;
+        timerSound.muted = true;
+    } else {
+        music.muted = false;
+        timerSound.muted = false;
+    }
+  }
+  window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', checkMuteStatus);
