@@ -39,7 +39,10 @@
   });
   setTimeout(function(){
     document.body.setAttribute("style", "height:"+window.innerHeight+"px");
-    document.getElementById("frame").src= "index.html";
+    if(isIOS())
+      document.getElementById("frame").src= "../LendingNY/index.html";
+    else
+      document.getElementById("frame").src= "index.html";
   },0)
   function onContentLoading(progress){
     console.log("onContentLoading "+progress)
