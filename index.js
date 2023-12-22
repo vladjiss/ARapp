@@ -745,8 +745,11 @@ function bounceLogoTeam() {
 const music = document.getElementById('music');
 const timerSound = document.getElementById('sound_timer');
 function startTimerSound() {
-    music.volume = 0.2;
-    timerSound.play();
+    if(!isMusicPause) {
+        music.volume = 0.2;
+        timerSound.play();
+    }
+    
 }
 function stopTimerSound() {
     music.volume = 1;
