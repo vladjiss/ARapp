@@ -717,8 +717,8 @@ function playTeamNameElement(elem) {
                     players.forEach((player) => player.querySelector('.player_name').classList.remove('anim_first_player'));
                     players.forEach((player) => player.querySelector('.name_input').classList.remove('input_animation'));
                 }, 4000);
-                players[i].querySelector('.name_input').classList.add('input_animation')
-                players[i].querySelector('.name_input').value = "Funtasticals";
+                players[i].querySelector('.name_input').classList.add('input_animation');
+                // players[i].querySelector('.name_input').value = players[i].querySelector('.name_input').placeholder;
                 firtsPlayer = false;
                 
             }
@@ -767,15 +767,46 @@ let sounds = [
   function onPlayBtnSound() {
     var randomIndex = Math.floor(Math.random() * sounds.length);
     var audio = new Audio(sounds[randomIndex]);
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (!isMusicPause) {
         audio.play(); 
     }
   }
 
   //включение фоновой музыки
+  let isMusicPause = false;
   function playMusic() {
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+     if(!isMusicPause) {
         music.play();
-    }
+        isMusicPause = false;
+     } 
+        
+    
   }
   window.addEventListener("click", playMusic);
+
+ 
+
+ //контроль звука
+  const btnSound = document.getElementById('sound_btn');
+  
+
+  function soundPlayOrStopBtn() {
+    if(isMusicPause) {
+        btnSound.innerHTML = "<span class='btn_sound_off'>sound off</span>";
+    } else {
+        btnSound.innerHTML = "<span class='btn_sound_on'>sound on</span>";
+    }
+  }
+  soundPlayOrStopBtn();
+  function playOrStopMusic() {
+
+        if(!isMusicPause) {
+            music.pause();
+            isMusicPause = true;
+        } else {
+            music.play();
+            isMusicPause = false;
+        }
+        
+      soundPlayOrStopBtn();
+  }

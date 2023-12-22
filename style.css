@@ -202,15 +202,17 @@ margin-bottom: 21px;
 }
 
 .btn-nav.btn-back {
-    left: 0;
+    left: 60px;
     background: url("img/btn_back.svg")  no-repeat;
 }
 
 .btn-nav.btn-menu {
-    right: 0;
+    left: 0px;
     background: url("img/btn_back.svg") no-repeat;
 }
-
+#choose_team .btn-nav.btn-menu {
+    left: 0;
+}
 .teamSelect {
     width: 90%;
     margin: 0 auto;
@@ -780,7 +782,7 @@ text-transform: uppercase;
     top: 102px;
     right: 0;
     width: 310px;
-    height: 187px;
+    height: 231px;
     border-radius: 30px 0px 0px 30px;
     background: #fffffffa;
     backdrop-filter: blur(50px);
@@ -1247,15 +1249,43 @@ text-transform: uppercase;
 .players_get_names .player_name.anim_first_player {
     animation: bounceName 2s 3;
 }
-.name_input.input_animation {
-    animation: nameRed 1s 6;
+#names_form .name_input.input_animation::placeholder {
+    color: red;
 }
+
 .player_id .team_logo.anim {
     animation: bounce 2.5s 1;
 }
 .game_score.anim {
     animation: rotateScore 1s ;
 }
+
+.btn_sound_off {
+    position: relative;
+}
+.btn_sound_on {
+    position: relative;
+}
+.btn_sound_on::after{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: url('img/Volume\ high.svg');
+    top: calc(50% - 14px);
+    right: -55px;
+}
+.btn_sound_off::after{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: url('img/volumeX.svg');
+    top: calc(50% - 14px);
+    right: -45px;
+}
+
+
 @keyframes rotateScore {
     0% {
         transform: rotate(0deg);
@@ -1282,11 +1312,6 @@ text-transform: uppercase;
         margin-top: 200%;
     }
     
-}
-@keyframes nameRed {
-    from {
-        color: red;
-    }
 }
 
 @keyframes inPlayerLeft {
