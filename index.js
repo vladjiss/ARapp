@@ -712,9 +712,9 @@ function playTeamNameElement(elem) {
         i = 0;
         while(firtsPlayer) {
             if(!players[i].querySelector('.player_name').classList.contains('hidden')) {
-                players[i].querySelector('.player_name').classList.add('anim_first_player');
+                players[i].querySelector('.player_name').classList.add('play_select');
                 setTimeout(() => {
-                    players.forEach((player) => player.querySelector('.player_name').classList.remove('anim_first_player'));
+                    players.forEach((player) => player.querySelector('.player_name').classList.remove('play_select'));
                     players.forEach((player) => player.querySelector('.name_input').classList.remove('input_animation'));
                 }, 4000);
                 players[i].querySelector('.name_input').classList.add('input_animation');
@@ -730,9 +730,9 @@ function playTeamNameElement(elem) {
 //при угадывании карточки анимация игрока и ротейшн баллов
 function bounceLogoTeam() {
     let logo = document.getElementById('card').querySelector('.team_logo');
-    logo.classList.add('anim');
+    logo.classList.add('play_select');
     setTimeout(() =>{
-        logo.classList.remove('anim');
+        logo.classList.remove('play_select');
     },2000)
 
     let score = document.getElementById('card').querySelector('.game_score');

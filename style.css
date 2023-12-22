@@ -349,6 +349,10 @@ box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
     
 
 }
+.teamSelect.names .players_get_names .player_name.play_select {
+    background-position: 4% 50%;
+    background-size: 25%;
+}
 .players_get_names {
     height: 70vh;
     overflow: auto;
@@ -974,6 +978,18 @@ padding: 20px 0;
     background-repeat: no-repeat;
     background-position: center;
 }
+.team1.play_select {
+    background-image: url("animation/anim_avatars/pink_dithered_0.2.gif");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.team1.winner {
+    background-image: url("animation/anim_avatars/pink_dithered_0.2.gif");
+    background-size: 27%;
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+}
 
 .team2 {
     background-image: url("img/animals/team2.png");
@@ -982,6 +998,18 @@ padding: 20px 0;
     background-position: center;
     
 }
+.team2.play_select {
+    background-image: url("animation/anim_avatars/pinkorange_dithered_0.2.gif");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.team2.winner {
+    background-image: url("animation/anim_avatars/pinkorange_dithered_0.2.gif");
+    background-size: 27%;
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+}
 
 .team3 {
     background-image: url("img/animals/team3.png");
@@ -989,12 +1017,36 @@ padding: 20px 0;
     background-repeat: no-repeat;
     background-position: center;
 }
+.team3.play_select {
+    background-image: url("animation/anim_avatars/violet_dithered_0.2.gif");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.team3.winner {
+    background-image: url("animation/anim_avatars/violet_dithered_0.2.gif");
+    background-size: 27%;
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+}
 
 .team4 {
     background-image: url("img/animals/team4.png");
     background-size: 70%;
     background-repeat: no-repeat;
+    background-position: 50% 45%;
+}
+.team4.play_select {
+    background-image: url("animation/anim_avatars/yellow_dithered_0.2.gif");
+    background-size: 90%;
+    background-repeat: no-repeat;
     background-position: center;
+}
+.team4.winner {
+    background-image: url("animation/anim_avatars/yellow_dithered_0.2.gif");
+    background-size: 27%;
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
 }
 
 .team5 {
@@ -1003,12 +1055,36 @@ padding: 20px 0;
     background-repeat: no-repeat;
     background-position: center;
 }
+.team5.play_select {
+    background-image: url("animation/anim_avatars/teal_dithered_0.2.gif");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.team5.winner {
+    background-image: url("animation/anim_avatars/teal_dithered_0.2.gif");
+    background-size: 27%;
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+}
 
 .team6 {
     background-image: url("img/animals/team6.png");
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
+}
+.team6.play_select {
+    background-image: url("animation/anim_avatars/blue_dithered_0.2.gif");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.team6.winner {
+    background-image: url("animation/anim_avatars/blue_dithered_0.2.gif");
+    background-size: 27%;
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
 }
 
 /* cards */
@@ -1237,19 +1313,14 @@ text-transform: uppercase;
     background: url('img/player_bg_maxwidth.png') 50% / 100% 100% no-repeat;
     
 }
-.player_score_menu.winner {
-    animation: bounceWin 2s infinite;
-}
+
 /*animation*/
 .players_choise .player.anim_in_player_quantity {
     animation: inPlayerBottom 2s;   
      
 }
 
-.players_choise .player.play_select {
-    animation: bounce 2s;   
-     
-}
+
 .players_get_names .player_wrapper.anim_player_letsname {
     animation: inPlayerLeft 1s;
 }
@@ -1291,7 +1362,9 @@ text-transform: uppercase;
     top: calc(50% - 14px);
     right: -45px;
 }
-
+.team_logo.play_select{
+    background-size: 125%;
+}
 
 @keyframes rotateScore {
     0% {
@@ -1328,18 +1401,7 @@ text-transform: uppercase;
     
     
 }
-@keyframes bounce {
-    10%{background-position:50% 35%;}
-    20%{background-position:50% 50%;}
-    30%{background-position:50% 35%;}
-    40%{background-position:50% 50%;}
-    50%{background-position:50% 35%;}
-    60%{background-position:50% 50%;}
-    70%{background-position:50% 35%;}
-    80%{background-position:50% 50%;}
-    90%{background-position:50% 35%;}
-    
-}
+
 @keyframes bounceName {
     10%{background-position:7% 35%;}
     20%{background-position:7% 50%;}
