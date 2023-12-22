@@ -167,11 +167,10 @@ margin-bottom: 21px;
 
 
 .nav {
-    
     position: relative;
     text-align: center;
     margin: 0px 0 4.9vh;
-    padding-top: 64px;
+    padding-top: 84px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -428,7 +427,7 @@ box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
 }
 
 .game_score {
-    background: url('img/score_point.png') 50% / cover no-repeat;
+    background: url('img/score_point.svg') 50% / cover no-repeat;
     color: #FF825A;
     display: flex;
     align-items: center;
@@ -450,8 +449,8 @@ box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
 
 .game_go.playing .game_score {
 
-    width: 43px;
-    height: 43px;
+    width: 41px;
+    height: 42px;
 }
 .game_go .nav {
     justify-content: start;
@@ -490,6 +489,14 @@ box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
     transform: rotate(-1deg);
     border: 2px solid #000000;
     border-radius: 40px;
+    animation: cardIn 1s;
+
+}
+
+@keyframes cardIn {
+    from{
+        transform: translateX(100%);
+    }
 
 }
 
@@ -533,7 +540,7 @@ box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
     justify-content: space-between;
     width: 84%;
     height: 8%;
-    position: absolute;
+    position: fixed;
     bottom: 40px;
     left: 8%;
     right: 8%;
