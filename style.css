@@ -1327,9 +1327,6 @@ text-transform: uppercase;
 .players_get_names .player_name.anim_first_player {
     animation: bounceName 2s 3;
 }
-#names_form .name_input.input_animation::placeholder {
-    color: red;
-}
 
 .player_id .team_logo.anim {
     animation: bounce 2.5s 1;
