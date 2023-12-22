@@ -1335,7 +1335,7 @@ text-transform: uppercase;
     animation: bounce 2.5s 1;
 }
 .game_score.anim {
-    animation: rotateScore 1s ;
+    animation: rotateScore 2s ;
 }
 
 .btn_sound_off {
@@ -1370,15 +1370,19 @@ text-transform: uppercase;
     0% {
         transform: rotate(0deg);
     }
-    50% {
-        transform: rotate(-7deg) translateX(-5px);
+    2% {
+        transform: rotate(-7deg) translateY(-5px);
     }
-    60% {
-        transform: rotate(-7deg) translateX(-5px) translateY(-5px);
+    4% {
+        transform: rotate(-7deg) translateY(-15px);
     }
-    70% {
-        transform: rotate(-7deg) translateX(-5px) translateY(5px);
+    8% {
+        transform: rotate(-7deg) translateY(15px);
     }
+    40% {
+        transform: rotate(0deg);
+    }
+    
     100% {
         transform: rotate(0deg);
     }
