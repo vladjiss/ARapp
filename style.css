@@ -1365,6 +1365,9 @@ text-transform: uppercase;
 .team_logo.play_select{
     background-size: 125%;
 }
+#whoms_first .player_score_menu.play_select {
+    background-size: 90%;
+}
 
 @keyframes rotateScore {
     0% {
