@@ -49,16 +49,17 @@ window.addEventListener('resize', function() {
 let CARDS = [{
     step:0,
     words: ["img/sketches/m6_s.jpg",
-            "img/sketches/m18_s.jpg",
-            "img/sketches/m20_s.jpg",
-            "img/sketches/m29_s.jpg",
-            "img/sketches/m36_s.jpg",
-            "img/sketches/m45_s.jpg",
-            "img/sketches/m50_s.jpg",
-            "img/sketches/m51_s.jpg",
-            "img/sketches/m53_s.jpg",
-            "img/sketches/m66_s.jpg"],
-    guessed:[]
+        "img/sketches/m18_s.jpg",
+        "img/sketches/m20_s.jpg",
+        "img/sketches/m29_s.jpg",
+        "img/sketches/m36_s.jpg",
+        "img/sketches/m45_s.jpg",
+        "img/sketches/m50_s.jpg",
+        "img/sketches/m51_s.jpg",
+        "img/sketches/m53_s.jpg",
+        "img/sketches/m66_s.jpg"],
+    guessed:[],
+    textes:["Cone", "Matryoshka", "Whale", "Cactus", "Safe", "Headphones", "House", "Balloon", "Wheel", "Sunflower"]
 }, {
     step:0,
     words: ["img/sketches/m48_s.jpg",
@@ -71,7 +72,9 @@ let CARDS = [{
         "img/sketches/m87_s.jpg",
         "img/sketches/m96_s.jpg",
         "img/sketches/m98_s.jpg"],
-    guessed:[]
+    guessed:[],
+    //textes:["Skateboard", "Crown", "Street Scales", "Street light", "Fern", "Camera", "Window", "Calculator", "Axe", "Moon"]
+    textes:["Globe", "Frog", "Crown", "Cassette tape", "Wok", "Dinosaur", "Brocolli", "Toilet paper", "Birdhouse", "Bed"]
 }, {
     step:0,
     words: ["img/sketches/m25_s.jpg",
@@ -84,7 +87,10 @@ let CARDS = [{
         "img/sketches/m75_s.jpg",
         "img/sketches/m78_s.jpg",
         "img/sketches/m101_s.jpg"],
-    guessed:[]
+    guessed:[],
+    // textes:["Lighthouse", "Hat", "Wheel", "Bell", "Cassette tape", "Knight", "Pumpkin", "Pillow", "Alarm clock", "Backgammon"]
+    textes:["Table soccer", "Traffic light", "Satellite", "Scales", "Baby stroller", "Street light", "Grand piano", "Pumpkin", "Pillow", "Fire extinguisher"]
+
 }, {
     step:0,
     words: ["img/sketches/m79_s.jpg",
@@ -97,7 +103,9 @@ let CARDS = [{
         "img/sketches/m9_s.jpg",
         "img/sketches/m10_s.jpg",
         "img/sketches/m11_s.jpg"],
-    guessed:[]
+    guessed:[],
+    // textes:["Chicken", "Tooth", "Cabbage", "Earth", "Soccer ball", "Traffic cone", "Anchor", "Shark", "Mammoth", "Gift"]
+    textes:["Alarm clock", "Fried eggs", "Fireplace", "Chair", "Laptop", "Ball", "Candy", "Lamp", "Shark", "Mammoth"]
 }, {
     step:0,
     words: ["img/sketches/m12_s.jpg",
@@ -110,7 +118,9 @@ let CARDS = [{
         "img/sketches/m26_s.jpg",
         "img/sketches/m27_s.jpg",
         "img/sketches/m30_s.jpg"],
-    guessed:[]
+    guessed:[],
+    //textes:["Avocado", "Fish", "Turtle", "Bicycle", "Palm tree", "Fireplace", "Table soccer", "Daisy", "Microphone", "Feather"]
+    textes:["Gift", "Avocado", "Fish", "Turtle", "Bicycle", "Tooth", "Cabbage", "Lighthouse", "Daisy", "Spruce"]
 }, {
     step:0,
     words: ["img/sketches/m31_s.jpg",
@@ -123,7 +133,9 @@ let CARDS = [{
         "img/sketches/m40_s.jpg",
         "img/sketches/m41_s.jpg",
         "img/sketches/m42_s.jpg"],
-    guessed:[]
+    guessed:[],
+    //textes:["Sushi", "Rubiks cube", "Guitar", "Arcade machine", "Safe", "Suitcase", "Duck", "Glasses", "Seashell/Crab", "Squid"]
+    textes:["Feather", "Sushi", "Rubiks cube", "Guitar", "Arcade machine", "Hat", "Suitcase", "Duck", "Glasses", "Seashell/Crab"]
 }, {
     step:0,
     words: ["img/sketches/m43_s.jpg",
@@ -136,7 +148,10 @@ let CARDS = [{
         "img/sketches/m63_s.jpg",
         "img/sketches/m64_s.jpg",
         "img/sketches/m65_s.jpg"],
-    guessed:[]
+    guessed:[],
+    //textes:["Boat", "Headphones", "Ant", "Bell pepper", "Beach umbrella", "Rug", "Chest", "Vase", "Sewing machine", "Sunflower"]
+    textes:["Squid", "Boat", "Bell", "Ant", "Bell pepper", "Beach umbrella", "Fan", "Chest", "Vase", "Sewing machine"]
+
 }, {
     step:0,
     words: ["img/sketches/m67_s.jpg",
@@ -149,9 +164,12 @@ let CARDS = [{
         "img/sketches/m84_s.jpg",
         "img/sketches/m86_s.jpg",
         "img/sketches/m88_s.jpg"],
-    guessed:[]
+    guessed:[],
+    // textes:["Baby stroller", "Piano", "Hummingbird", "Hummingbird", "Grand piano", "Dinosaur", "Tractor", "Brocolli", "Toilet paper", "Radio"]
+    textes:["Picture", "Knight", "Piano", "Hummingbird", "Fern", "Tent", "Camera", "Tractor", "Window", "Calculator"]
+
 }, {
-    step:0,
+    step: 0,
     words: ["img/sketches/m89_s.jpg",
         "img/sketches/m90_s.jpg",
         "img/sketches/m91_s.jpg",
@@ -162,7 +180,9 @@ let CARDS = [{
         "img/sketches/m97_s.jpg",
         "img/sketches/m100_s.jpg",
         "img/sketches/m102_s.jpg"],
-    guessed:[]
+    guessed: [],
+    // textes:["Elephant", "Snail", "Shield", "Deer", "Compass", "Camel", "Birdhouse", "Bed", "Fire extinguisher", "none"]
+    textes: ["Radio", "Elephant", "Snail", "Shield", "Deer", "Compass", "Camel", "Axe", "Mink", "Backgammon"]
 }, {
     step:0,
     words: ["img/sketches/m3_s.jpg",
@@ -175,7 +195,10 @@ let CARDS = [{
         "img/sketches/m61_s.jpg",
         "img/sketches/m80_s.jpg",
         "img/sketches/m103_s.jpg"],
-    guessed:[]
+    guessed:[],
+    // textes:["Laptop", "Lamp", "Matryoshka doll", "Whale", "Cactus", "Giraffe", "House", "Fan", "Tent", "none"]
+    textes:["Earth", "Anchor", "Palm tree", "Astronaut", "Microphone", "Barrel", "Skateboard", "Rug", "Cock", "Moon"]
+
 }];
 const STEPS = {
     CHOOSE_TEAM: 0,
@@ -251,6 +274,7 @@ function startCart(card) {
     $("#card .card_img").css({
         "background-image":"url('"+card.words[0]+"')"
     })
+    $("#name_card").text(card.textes[0])
     startTimer(card)
 }
 let timer = 59;
@@ -292,6 +316,7 @@ function skip(card){
         $("#card .card_img").css({
             "background-image":"url('"+card.words[card.step]+"')"
         })
+        $("#name_card").text(card.textes[card.step])
         timer = 59;
         hideSection(SECTIONS_LIST.SHOW)
         showSection(SECTIONS_LIST.CARD)
@@ -484,6 +509,7 @@ $("#show .next_button").on("click",function(){
         $("#card .card_img").css({
             "background-image":"url('"+card.words[card.step]+"')"
         })
+        $("#name_card").text(card.textes[card.step])
         //$("#card .object").text(card.words[card.game_step])
         timer = 59;
         hideSection(SECTIONS_LIST.SHOW)
@@ -643,9 +669,9 @@ window.addEventListener('message', (msg) => {
         let progress = Math.round((msg.split(" ")[1])*100);
         console.log("onContentLoading "+progress)
         $(".loadPage").removeClass("hidden");
-        percentElement.innerText = progress + '%';
         progressLineElement.style.width = progress + '%';
         clearTimeout(closeLoadingTimeout);
+        //percentElement.innerText = progress + '%';
     }
     if(msg.includes("onContentLoaded")){
         console.log("onContentLoaded");
