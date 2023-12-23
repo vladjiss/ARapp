@@ -338,8 +338,8 @@ box-shadow: 4px 4px 0px 1px rgba(34, 60, 80, 0.3);
 .teamSelect.names .players_get_names .player_name {
     width:100%;
     min-height: 110px;
-    background-position: 7% 50%;
-    background-size: 20%;
+    background-position: 4% 50%;
+    background-size: 25%;
     border-radius: 22.445px;
     margin: 10px 0;
     display: flex;
@@ -747,10 +747,10 @@ text-transform: uppercase;
 
 .game_score_menu .player_score_menu {
     position: relative;
-    background-size: 20%;
+    background-size: 25%;
     min-height: 110px;
     border-radius: 22.445px;
-    background-position: 10% 50%;
+    background-position: 5% 50%;
     margin-bottom: 10px;
     width: 100%;
 }
@@ -974,7 +974,7 @@ padding: 20px 0;
 /* player icons*/
 .team1 {
     background-image: url("img/animals/team1.png");
-    background-size: 70%;
+    background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -986,14 +986,14 @@ padding: 20px 0;
 }
 .team1.winner {
     background-image: url("animation/anim_avatars/pink_dithered_0.2.gif");
-    background-size: 27%;
+    background-size: 25%;
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
 
 .team2 {
     background-image: url("img/animals/team2.png");
-    background-size: 70%;
+    background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
     
@@ -1006,14 +1006,14 @@ padding: 20px 0;
 }
 .team2.winner {
     background-image: url("animation/anim_avatars/pinkorange_dithered_0.2.gif");
-    background-size: 27%;
+    background-size: 25%;
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
 
 .team3 {
     background-image: url("img/animals/team3.png");
-    background-size: 70%;
+    background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -1025,14 +1025,14 @@ padding: 20px 0;
 }
 .team3.winner {
     background-image: url("animation/anim_avatars/violet_dithered_0.2.gif");
-    background-size: 27%;
+    background-size: 25%;
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
 
 .team4 {
     background-image: url("img/animals/team4.png");
-    background-size: 70%;
+    background-size: 90%;
     background-repeat: no-repeat;
     background-position: 50% 45%;
 }
@@ -1044,14 +1044,14 @@ padding: 20px 0;
 }
 .team4.winner {
     background-image: url("animation/anim_avatars/yellow_dithered_0.2.gif");
-    background-size: 27%;
+    background-size: 25%;
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
 
 .team5 {
     background-image: url("img/animals/team5.png");
-    background-size: 70%;
+    background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -1063,14 +1063,14 @@ padding: 20px 0;
 }
 .team5.winner {
     background-image: url("animation/anim_avatars/teal_dithered_0.2.gif");
-    background-size: 27%;
+    background-size: 25%;
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
 
 .team6 {
     background-image: url("img/animals/team6.png");
-    background-size: 70%;
+    background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -1082,7 +1082,7 @@ padding: 20px 0;
 }
 .team6.winner {
     background-image: url("animation/anim_avatars/blue_dithered_0.2.gif");
-    background-size: 27%;
+    background-size: 25%;
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
@@ -1180,6 +1180,19 @@ padding: 20px 0;
     left: 0;
     z-index:-1
 }
+.instruction p {
+    color: #FFF;
+
+text-align: center;
+font-family: "YS Display";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 300px;
+margin: 0 auto;
+
+}
 .photo_button {
     height: 100%;
     aspect-ratio: 1;
@@ -1213,7 +1226,7 @@ padding: 20px 0;
     background-color: #ffffff00;
     border: 0;
     box-shadow: none;
-    background-size: 70%;
+    background-size: 90%;
 
 }
 #whoms_first .players_score .player_score_menu::before {
@@ -1326,9 +1339,6 @@ text-transform: uppercase;
 }
 .players_get_names .player_name.anim_first_player {
     animation: bounceName 2s 3;
-}
-#names_form .name_input.input_animation::placeholder {
-    color: red;
 }
 
 .player_id .team_logo.anim {
