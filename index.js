@@ -276,6 +276,7 @@ function startCart(card) {
     })
     $("#name_card").text(card.textes[0])
     startTimer(card)
+    startTimerSound();
 }
 let timer = 29;
 let timerTimeout;
@@ -287,6 +288,7 @@ function startTimer(card) {
     if(timer > 0) {
         timerTimeout = setTimeout(function () {
             startTimer(card);
+            startTimerSound();
         },1000)
         if(timer <= 5){
             $("#card .timer").css("color","#E35E4C");
@@ -327,9 +329,11 @@ function skip(card){
         hideSection(SECTIONS_LIST.SHOW)
         showSection(SECTIONS_LIST.CARD)
         startTimer()
+        startTimerSound();
         sendMessageToApp('hideAll');
     }
     else {
+        stopTimerSound()
         finish(card)
     }
 }
@@ -527,7 +531,8 @@ $("#show .next_button").on("click",function(){
         sendMessageToApp('hideAll');
     }
     else {
-        finish(card)
+        finish(card);
+        stopTimerSound()
     }
 })
 //show all
@@ -784,6 +789,7 @@ const timerSound = document.getElementById('sound_timer');
 function startTimerSound() {
     if(!isMusicPause) {
         music.volume = 0.2;
+        audio.currentTime = 0;
         timerSound.play();
     }
     
