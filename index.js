@@ -277,7 +277,7 @@ function startCart(card) {
     $("#name_card").text(card.textes[0])
     startTimer(card)
 }
-let timer = 59;
+let timer = 29;
 let timerTimeout;
 function startTimer(card) {
     if(card == undefined)
@@ -288,6 +288,12 @@ function startTimer(card) {
         timerTimeout = setTimeout(function () {
             startTimer(card);
         },1000)
+        if(timer <= 5){
+            $("#card .timer").css("color","#E35E4C");
+        }
+        else {
+            $("#card .timer").css("color","#263238");
+        }
     }
     else {
         skip(card);
@@ -317,7 +323,7 @@ function skip(card){
             "background-image":"url('"+card.words[card.step]+"')"
         })
         $("#name_card").text(card.textes[card.step])
-        timer = 59;
+        timer = 29;
         hideSection(SECTIONS_LIST.SHOW)
         showSection(SECTIONS_LIST.CARD)
         startTimer()
@@ -407,6 +413,7 @@ function finish(card){
     })
 }
 //block choose_team
+playStartScreenAnimations()
 $("#choose_team .player").on("click",function(){
     let team_number = Number($(this).attr("data-index"));
     if(!choosen_teams.includes(team_number)){
@@ -460,6 +467,7 @@ $("#names_form .btn-back").on("click",function(){
     $("#names_form .footer_button").addClass("disabled")
     hideSection(SECTIONS_LIST.CHOOSE_NAMES)
     showSection(SECTIONS_LIST.CHOOSE_TEAM)
+   // playStartScreenAnimations()
 })
 //block whoms_first
 $("#whoms_first .player_score_menu").on("click",function(){
@@ -496,7 +504,8 @@ $("#scan .footer_button").on("click",function(){
 })
 //block card
 $("#card .btn_yes").on("click",function(){
-    accept()
+    bounceLogoTeam();
+    accept();
 })
 $("#card .btn_no").on("click",function(){
     skip()
@@ -511,7 +520,7 @@ $("#show .next_button").on("click",function(){
         })
         $("#name_card").text(card.textes[card.step])
         //$("#card .object").text(card.words[card.game_step])
-        timer = 59;
+        timer = 29;
         hideSection(SECTIONS_LIST.SHOW)
         showSection(SECTIONS_LIST.CARD)
         startTimer()
@@ -623,6 +632,7 @@ function play_again(){
     location.reload();
 }
 function show_score(){
+    $(".winner").removeClass("winner")
     showSection(SECTIONS_LIST.RESULTS);
     let winner = -1;
     let max = 0;
@@ -633,6 +643,7 @@ function show_score(){
         }
     })
     $("#results .team"+winner).addClass("winner")
+    $("#results .team"+winner).parent().addClass("winner")
     sendMessageToApp("log winner "+winner)
 }
 
@@ -755,13 +766,13 @@ function playTeamNameElement(elem) {
 
 //при угадывании карточки анимация игрока и ротейшн баллов
 function bounceLogoTeam() {
-    let logo = document.getElementById('card').querySelector('.team_logo');
+    let logo = document.getElementById('show').querySelector('.team_logo');
     logo.classList.add('play_select');
     setTimeout(() =>{
         logo.classList.remove('play_select');
     },2000)
 
-    let score = document.getElementById('card').querySelector('.game_score');
+    let score = document.getElementById('show').querySelector('.game_score');
     score.classList.add('anim');
     setTimeout(() =>{
         score.classList.remove('anim');
