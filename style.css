@@ -89,6 +89,7 @@ body {
 
 .loadPage {
     background-image: url("img/anim_bg.gif");
+    background-position-x: -8vw;
     background-color: #096aca;
     background-size: contain;
     position: relative;
