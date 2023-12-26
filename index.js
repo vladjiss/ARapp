@@ -271,6 +271,7 @@ function continueGame(){
     //}
 }
 function startCart(card) {
+    console.log("start card")
     $("#card .card_img").css({
         "background-image":"url('"+card.words[0]+"')"
     })
@@ -278,7 +279,7 @@ function startCart(card) {
     startTimer(card)
     startTimerSound();
 }
-let timer = 29;
+let timer = 31;
 let timerTimeout;
 function startTimer(card) {
     if(card == undefined)
@@ -288,7 +289,6 @@ function startTimer(card) {
     if(timer > 0) {
         timerTimeout = setTimeout(function () {
             startTimer(card);
-            startTimerSound();
         },1000)
         if(timer <= 5){
             $("#card .timer").css("color","#E35E4C");
@@ -325,7 +325,7 @@ function skip(card){
             "background-image":"url('"+card.words[card.step]+"')"
         })
         $("#name_card").text(card.textes[card.step])
-        timer = 29;
+        timer = 31;
         hideSection(SECTIONS_LIST.SHOW)
         showSection(SECTIONS_LIST.CARD)
         startTimer()
@@ -357,6 +357,7 @@ function accept(card){
     else {
         finish(card)
     }*/
+    stopTimerSound();
     hideSection(SECTIONS_LIST.CARD)
     showSection(SECTIONS_LIST.SHOW)
 }
@@ -500,6 +501,7 @@ $("#whoms_first .btn-back").on("click",function(){
 })
 //block scan
 $("#scan .footer_button").on("click",function(){
+    console.log("scan .footer_button")
     $("#scan .footer_button").addClass("disabled");
     $("#scan .footer_player").addClass("hidden");
     startCart(CARDS[GAME.current_card]);
@@ -524,7 +526,7 @@ $("#show .next_button").on("click",function(){
         })
         $("#name_card").text(card.textes[card.step])
         //$("#card .object").text(card.words[card.game_step])
-        timer = 29;
+        timer = 31;
         hideSection(SECTIONS_LIST.SHOW)
         showSection(SECTIONS_LIST.CARD)
         startTimer()
@@ -789,9 +791,13 @@ const timerSound = document.getElementById('sound_timer');
 function startTimerSound() {
     if(!isMusicPause) {
         music.volume = 0.2;
-        audio.currentTime = 0;
+        //timerSound.currentTime = 0;
         timerSound.play();
-    }
+    }/*
+    setTimeout(function(){
+        if(!isMusicPause) {
+        }
+    },2000)*/
     
 }
 function stopTimerSound() {
