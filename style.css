@@ -85,12 +85,18 @@ body {
     font-family: 'YS Text', Arial, sans-serif;
 }
 
-
+.logo {
+    position: fixed;
+    width: 100px;
+    top: 100px;
+    left: calc(50% - 50px);
+}
 
 .loadPage {
     background-image: url("img/anim_bg.gif");
+    background-position-x: 67%;
     background-color: #096aca;
-    background-size: contain;
+    background-size: cover;
     position: relative;
 
     color: #ffffff;
