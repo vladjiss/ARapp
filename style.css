@@ -1458,3 +1458,15 @@ text-transform: uppercase;
     }
     
 }
+#whoms_first .player_score_menu {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2em;
+}
+#whoms_first .player_score_menu p {
+    position: absolute;
+    top:  100%;
+    width: 100%;
+    left: 0;
+    
+}

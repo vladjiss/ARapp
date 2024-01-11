@@ -92,7 +92,7 @@
                 <div class="player mouse team6" data-index=6></div>
             </div>
         </div>
-        <div class="footer_button disabled" onclick="onPlayBtnSound(); playTeamNameElement()">next</div>
+        <div class="footer_button disabled" onclick="onPlayBtnSound(); playTeamNameElement()" ontouchstart>next</div>
     </div>
     <div id="names_form" class="screen teamSelect names  white_back hidden" onclick="toggleHidden(this)"><!--lets name the team -->
         <div class="nav">
@@ -113,15 +113,15 @@
             <h1>let's name the team</h1>
             <div class="players_get_names">
                 
-                <div class="player_wrapper"><div class="player_name wolf team1"><input class="name_input" placeholder="Funtasticals" type="text" data-index=1></div></div>
-                <div class="player_wrapper"><div class="player_name bear team2"><input class="name_input" placeholder="Giggleblasters" type="text" data-index=2></div></div>
-                <div class="player_wrapper"><div class="player_name penguin team3"><input class="name_input" placeholder="ChuckleChasers" type="text" data-index=3></div></div>
-                <div class="player_wrapper"><div class="player_name duck team4"><input class="name_input" placeholder="Loligaggers" type="text" data-index=4></div></div>
-                <div class="player_wrapper"><div class="player_name frog team5"><input class="name_input" placeholder="Mixmaxers" type="text" data-index=5></div></div>
-                <div class="player_wrapper"><div class="player_name mouse team6"><input class="name_input" placeholder="PiPiPi" type="text" data-index=6></div></div>
+                <div class="player_wrapper"><div class="player_name wolf team1"><input class="name_input" placeholder="Funtasticals" type="text" data-index=1 maxlength="9"></div></div>
+                <div class="player_wrapper"><div class="player_name bear team2"><input class="name_input" placeholder="Giggleblasters" type="text" data-index=2 maxlength="9"></div></div>
+                <div class="player_wrapper"><div class="player_name penguin team3"><input class="name_input" placeholder="ChuckleChasers" type="text" data-index=3 maxlength="9"></div></div>
+                <div class="player_wrapper"><div class="player_name duck team4"><input class="name_input" placeholder="Loligaggers" type="text" data-index=4 maxlength="9"></div></div>
+                <div class="player_wrapper"><div class="player_name frog team5"><input class="name_input" placeholder="Mixmaxers" type="text" data-index=5 maxlength="9"></div></div>
+                <div class="player_wrapper"><div class="player_name mouse team6"><input class="name_input" placeholder="PiPiPi" type="text" data-index=6 maxlength="9"></div></div>
             </div>
         </div>
-        <div class="footer_button disabled" onclick="onPlayBtnSound()">next</div>
+        <div class="footer_button disabled" onclick="onPlayBtnSound()" ontouchstart>next</div>
 
     </div>
     <div id="_whoms_first" class="screen teamSelect first_play  white_back hidden" onclick="toggleHidden(this)"> <!--who first -->
@@ -206,8 +206,8 @@
         </div>
 
         <div class="container_btns">
-            <div class="btn_no" onclick="onPlayBtnSound()"></div>
-            <div class="btn_yes" onclick="onPlayBtnSound()"></div>
+            <div class="btn_no" onclick="onPlayBtnSound()" ontouchstart></div>
+            <div class="btn_yes" onclick="onPlayBtnSound()" ontouchstart></div>
         </div>
     </div>
     <div id="show" class="screen game_go playing hidden" onclick="toggleHidden(this)"><!--Dino image -->
@@ -517,15 +517,15 @@
         <h1>WHO FIRST</h1>
         <div class="main_game">
             <div class="players_score">
-                <div class="player_score_menu wolf team1" data-index=1></div>
-                <div class="player_score_menu bear team2" data-index=2></div>
-                <div class="player_score_menu penguin team3" data-index=3></div>
-                <div class="player_score_menu duck team4" data-index=4></div>
-                <div class="player_score_menu frog team5" data-index=5></div>
-                <div class="player_score_menu mouse team6" data-index=6></div>
+                <div class="player_score_menu wolf team1" data-index=1><p>Team 1</p></div>
+                <div class="player_score_menu bear team2" data-index=2><p>Team 2</p></div>
+                <div class="player_score_menu penguin team3" data-index=3><p>Team 3</p></div>
+                <div class="player_score_menu duck team4" data-index=4><p>Team 4</p></div>
+                <div class="player_score_menu frog team5" data-index=5><p>Team 5</p></div>
+                <div class="player_score_menu mouse team6" data-index=6><p>Team 6</p></div>
             </div>
         </div>
-        <div class="footer_button disabled" onclick="onPlayBtnSound()">start</div>
+        <div class="footer_button disabled" onclick="onPlayBtnSound()" ontouchstart>start</div>
 
     </div>
 
