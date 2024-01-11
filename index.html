@@ -3,11 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>ARapp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(96096546, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/96096546" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.6.0.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.3/lottie.min.js"></script>
-    <title>ARapp</title>
     <style>
         html,body {
             overflow: hidden;
@@ -75,11 +92,11 @@
                 <div class="player mouse team6" data-index=6></div>
             </div>
         </div>
-        <div class="footer_button disabled" onclick="onPlayBtnSound(), playTeamNameElement()">next</div>
+        <div class="footer_button disabled" onclick="onPlayBtnSound(); playTeamNameElement()">next</div>
     </div>
     <div id="names_form" class="screen teamSelect names  white_back hidden" onclick="toggleHidden(this)"><!--lets name the team -->
         <div class="nav">
-            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(), soundPlayOrStopBtn();">
+            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(); soundPlayOrStopBtn();">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                     <path d="M5.8577 6.75C8.27194 6.75 18.2306 7.45417 20.1423 6.75" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M5.8577 13.1142C7.34202 12.873 15.0992 13.5803 20.1423 13.1142" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -132,7 +149,7 @@
     </div>
     <div id="scan" class="screen game_go hidden" onclick="toggleHidden(this)"> <!--Start game with cards -->
         <div class="nav">
-            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(), soundPlayOrStopBtn()">
+            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(); soundPlayOrStopBtn()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                     <path d="M5.8577 6.75C8.27194 6.75 18.2306 7.45417 20.1423 6.75" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M5.8577 13.1142C7.34202 12.873 15.0992 13.5803 20.1423 13.1142" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -159,7 +176,7 @@
     <div id="card" class="screen game_go playing hidden" onclick="toggleHidden(this)"><!--card with DinoRex and timer  -->
         <div class="nav game_nav"
             style=" display: flex; justify-content: space-between; align-items: center;">
-            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(), soundPlayOrStopBtn();">
+            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(); soundPlayOrStopBtn();">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                     <path d="M5.8577 6.75C8.27194 6.75 18.2306 7.45417 20.1423 6.75" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M5.8577 13.1142C7.34202 12.873 15.0992 13.5803 20.1423 13.1142" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -196,7 +213,7 @@
     <div id="show" class="screen game_go playing hidden" onclick="toggleHidden(this)"><!--Dino image -->
         <div class="nav game_nav"
             style=" width: 100%; display: flex; justify-content: space-between; align-items: center;">
-            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(), soundPlayOrStopBtn()">
+            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(); soundPlayOrStopBtn()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                     <path d="M5.8577 6.75C8.27194 6.75 18.2306 7.45417 20.1423 6.75" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M5.8577 13.1142C7.34202 12.873 15.0992 13.5803 20.1423 13.1142" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -226,7 +243,7 @@
     <div id="show_all" class="screen game_go playing hidden" onclick="toggleHidden(this)"><!--Dino image -->
         <div class="nav game_nav"
              style=" width: 100%; display: flex; justify-content: space-between; align-items: center;">
-            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(), soundPlayOrStopBtn()">
+            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(); soundPlayOrStopBtn()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                     <path d="M5.8577 6.75C8.27194 6.75 18.2306 7.45417 20.1423 6.75" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M5.8577 13.1142C7.34202 12.873 15.0992 13.5803 20.1423 13.1142" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -256,7 +273,7 @@
     <div class="screen game_go playing hidden" onclick="toggleHidden(this)"><!--Dino share -->
         <div class="nav game_nav"
             style=" width: 100%; display: flex; justify-content: space-between; align-items: center; visibility: hidden;">
-            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(), soundPlayOrStopBtn()">
+            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(); soundPlayOrStopBtn()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                     <path d="M5.8577 6.75C8.27194 6.75 18.2306 7.45417 20.1423 6.75" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M5.8577 13.1142C7.34202 12.873 15.0992 13.5803 20.1423 13.1142" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -289,7 +306,7 @@
     <div class="screen game_go playing hidden" onclick="toggleHidden(this)"><!--card with KingKong and timer  -->
         <div class="nav game_nav"
             style=" width: 100%; display: flex; justify-content: space-between; align-items: center;">
-            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(), soundPlayOrStopBtn()">
+            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(); soundPlayOrStopBtn()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                     <path d="M5.8577 6.75C8.27194 6.75 18.2306 7.45417 20.1423 6.75" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M5.8577 13.1142C7.34202 12.873 15.0992 13.5803 20.1423 13.1142" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -325,7 +342,7 @@
     <div class="screen game_go playing hidden" onclick="toggleHidden(this)"><!--KingKong image -->
         <div class="nav game_nav"
             style=" width: 100%; display: flex; justify-content: space-between; align-items: center;">
-            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(), soundPlayOrStopBtn()">
+            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(); soundPlayOrStopBtn()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                     <path d="M5.8577 6.75C8.27194 6.75 18.2306 7.45417 20.1423 6.75" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M5.8577 13.1142C7.34202 12.873 15.0992 13.5803 20.1423 13.1142" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -355,7 +372,7 @@
     <div class="screen game_go playing end_game_cards hidden" onclick="toggleHidden(this)"><!--when end cards game -->
         <div class="nav game_nav"
             style=" width: 100%; display: flex; justify-content: space-between; align-items: center;">
-            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(), soundPlayOrStopBtn()">
+            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(); soundPlayOrStopBtn()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                     <path d="M5.8577 6.75C8.27194 6.75 18.2306 7.45417 20.1423 6.75" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M5.8577 13.1142C7.34202 12.873 15.0992 13.5803 20.1423 13.1142" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -432,7 +449,7 @@
                         fill="black" />
                 </svg>
             </div>
-            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(), soundPlayOrStopBtn()">
+            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(); soundPlayOrStopBtn()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                     <path d="M5.8577 6.75C8.27194 6.75 18.2306 7.45417 20.1423 6.75" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M5.8577 13.1142C7.34202 12.873 15.0992 13.5803 20.1423 13.1142" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -458,7 +475,7 @@
                     <path d="M9.04001 2C8.45335 2.27778 5.1217 5.29593 4.05335 6.27541C2.05789 8.10487 2.00001 7.9302 2.00001 8.11112C2.00001 8.23123 3.62645 9.2553 5.12078 10.6501C7.08215 12.4809 9.04001 14.7778 9.04001 14.7778C9.9133 14.7778 6.6272 10.9468 6.31388 10.6501C4.67205 9.09536 3.704 9.37625 3.41067 8.8207C3.176 8.37625 7.18224 3.85186 9.33335 2.00001L9.04001 2ZM2.89453 8.11112C5.98334 7.98971 13.2962 8.40514 15.171 7.74691C16.0574 8.50857 6.82859 9.84872 2.89453 8.11112Z" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
             </div>
-            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(), soundPlayOrStopBtn()">
+            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(); soundPlayOrStopBtn()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                     <path d="M5.8577 6.75C8.27194 6.75 18.2306 7.45417 20.1423 6.75" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M5.8577 13.1142C7.34202 12.873 15.0992 13.5803 20.1423 13.1142" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -489,7 +506,7 @@
                     <path d="M9.04001 2C8.45335 2.27778 5.1217 5.29593 4.05335 6.27541C2.05789 8.10487 2.00001 7.9302 2.00001 8.11112C2.00001 8.23123 3.62645 9.2553 5.12078 10.6501C7.08215 12.4809 9.04001 14.7778 9.04001 14.7778C9.9133 14.7778 6.6272 10.9468 6.31388 10.6501C4.67205 9.09536 3.704 9.37625 3.41067 8.8207C3.176 8.37625 7.18224 3.85186 9.33335 2.00001L9.04001 2ZM2.89453 8.11112C5.98334 7.98971 13.2962 8.40514 15.171 7.74691C16.0574 8.50857 6.82859 9.84872 2.89453 8.11112Z" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
             </div>
-            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(), soundPlayOrStopBtn()">
+            <div class="btn-nav btn-menu" onclick="onPlayBtnSound(); soundPlayOrStopBtn()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
                     <path d="M5.8577 6.75C8.27194 6.75 18.2306 7.45417 20.1423 6.75" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M5.8577 13.1142C7.34202 12.873 15.0992 13.5803 20.1423 13.1142" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
