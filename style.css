@@ -1470,3 +1470,12 @@ text-transform: uppercase;
     left: 0;
     
 }
+.reset_button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 56px;
+    height: 65px;
+    background: url('img/btn_reset.svg') 50% 60% / 26px 30px  no-repeat, 
+    url('img/Group\ 2087325650.svg') 50% / cover no-repeat;
+}
