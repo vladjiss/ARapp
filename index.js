@@ -337,6 +337,9 @@ function skip(card){
         finish(card)
     }
 }
+function resetTracking(){
+    sendMessageToApp('resetTracking');
+}
 function accept(card){
     if(card == undefined)
         card = CARDS[GAME.current_card];
@@ -629,6 +632,9 @@ $(".photo_button").on("touchstart",function () {
     making_photo = true;
     photo_tick()
     //sendMessageToApp("photo")
+})
+$(".photo_button").on("click",function () {
+    //resetTracking()
 })
 $(".btn-nav.btn-menu").on("click",function(){
     $("#menu").removeClass("hidden")
