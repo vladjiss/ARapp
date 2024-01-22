@@ -57,11 +57,20 @@
       console.log(msg.data)
     }
     else {
-      console.log(msg.data)
-      if (isIOS()) {
-        webkit.messageHandlers['NativeInterface'].postMessage('callTrigger ' + msg.data);
-      } else {
-        NativeInterface.callTrigger(msg.data);
+      if(msg.data.includes("resetTracking")){
+        if (isIOS()) {
+          webkit.messageHandlers['NativeInterface'].postMessage('resetTracking');
+        } else {
+          NativeInterface.resetTracking();
+        }
+      }
+      else {
+        console.log(msg.data)
+        if (isIOS()) {
+          webkit.messageHandlers['NativeInterface'].postMessage('callTrigger ' + msg.data);
+        } else {
+          NativeInterface.callTrigger(msg.data);
+        }
       }
     }
   });
