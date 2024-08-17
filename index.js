@@ -633,8 +633,8 @@ $(".photo_button").on("touchstart",function () {
     photo_tick()
     //sendMessageToApp("photo")
 })
-$(".photo_button").on("click",function () {
-    //resetTracking()
+$(".reset_button ").on("click",function () {
+    resetTracking()
 })
 $(".btn-nav.btn-menu").on("click",function(){
     $("#menu").removeClass("hidden")
